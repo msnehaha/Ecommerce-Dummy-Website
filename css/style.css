@@ -1,0 +1,34 @@
+.header__top {
+  height: 3rem;
+  background-color: rebeccapurple;
+  display: flex;
+  justify-content: space-around; }
+  .header__top-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem; }
+    .header__top-left--email {
+      display: flex;
+      align-items: center; }
+      .header__top-left--email::after {
+        content: '';
+        height: 2rem;
+        width: 0.1rem;
+        background-color: black; }
+      .header__top-left--email-icon {
+        width: 2rem;
+        height: 2rem; }
+  .header__top-right {
+    display: flex;
+    justify-content: end;
+    flex-wrap: wrap;
+    background-color: antiquewhite; }
+    .header__top-right--icons {
+      display: flex;
+      flex-direction: row; }
+    .header__top-right--icon {
+      width: 2rem;
+      height: 1rem; }
+
+body {
+  font-family: 'Cairo'; }
