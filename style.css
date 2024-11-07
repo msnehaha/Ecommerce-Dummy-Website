@@ -1,0 +1,48 @@
+.header__top {
+  background-color: rebeccapurple;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+  .header__top-left {
+    display: flex;
+    justify-content: space-evenly;
+    flex: 1 0 auto;
+    align-items: center; }
+    .header__top-left--email {
+      display: flex;
+      align-items: center;
+      gap: 1rem; }
+      .header__top-left--email-text {
+        display: inline-block; }
+        .header__top-left--email-text::after {
+          content: " ";
+          height: 1rem;
+          width: 50%;
+          background-color: black; }
+      .header__top-left--email-icon {
+        width: 2rem;
+        height: 2rem; }
+  .header__top-right {
+    background-color: green;
+    display: flex;
+    justify-content: space-between;
+    flex: 1 0 auto;
+    align-items: center; }
+    .header__top-right--icon {
+      width: 2rem;
+      height: 2rem;
+      gap: 1rem; }
+    .header__top-right--login {
+      display: flex;
+      align-items: center; }
+      .header__top-right--login-text {
+        display: inline-block; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: "Cairo";
+  padding: 0 3rem;
+  font-size: 75%; }
