@@ -1,34 +1,49 @@
-.header__top {
-  height: 3rem;
-  background-color: rebeccapurple;
-  display: flex;
-  justify-content: space-around; }
-  .header__top-left {
+.header {
+  background-color: #f7f0f0; }
+  .header__top {
     display: flex;
+    justify-content: space-around;
     align-items: center;
-    gap: 1rem; }
-    .header__top-left--email {
+    min-height: 3rem; }
+    .header__top-left {
       display: flex;
-      align-items: center; }
-      .header__top-left--email::after {
-        content: '';
-        height: 2rem;
-        width: 0.1rem;
-        background-color: black; }
-      .header__top-left--email-icon {
-        width: 2rem;
-        height: 2rem; }
-  .header__top-right {
-    display: flex;
-    justify-content: end;
-    flex-wrap: wrap;
-    background-color: antiquewhite; }
-    .header__top-right--icons {
+      justify-content: space-between;
+      flex: 1 0 30%; }
+      .header__top-left--email {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem; }
+        .header__top-left--email-text::after {
+          content: " ";
+          height: 1rem;
+          width: 50%;
+          background-color: black; }
+        .header__top-left--email-icon {
+          width: 1rem;
+          height: 1rem; }
+    .header__top-right {
       display: flex;
-      flex-direction: row; }
-    .header__top-right--icon {
-      width: 2rem;
-      height: 1rem; }
+      justify-content: space-between;
+      align-items: center;
+      flex: 1 0 40%;
+      padding: 0 5rem; }
+      .header__top-right--icon-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+      .header__top-right--icon {
+        width: 1rem;
+        height: 1rem; }
+      .header__top-right--login {
+        display: flex;
+        align-items: center; }
+        .header__top-right--login-text {
+          display: inline-block; }
+
+* {
+  margin: 0;
+  padding: 0; }
 
 body {
-  font-family: 'Cairo'; }
+  font-family: "Cairo";
+  font-size: 75%; }
