@@ -1,0 +1,25 @@
+.icon{
+    width: 1rem;
+    height: 1rem;
+    padding: 0 .5rem;
+}
+
+.header__flag-img{
+    width: 20px;
+    height: 25px;
+}
+
+.btn{
+   
+    background-color: $text-color-secondary;
+    padding: 0 2rem;
+    color: white;
+    text-transform: capitalize;
+    border: none;
+
+}
+
+.phone-info__bold{
+    color: black;
+    font-size: 1rem;
+}

@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Cairo";
+
+  font-size: 75%;
+}
+
+.section__header {
+  font-size: 1.3rem;
+  text-align: center;
+  position: relative;
+  font-weight: 900;
+
+  &::after {
+    content: '';
+    background-color: $text-color-secondary;
+    width: 70px;
+    height: 0.2rem;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+
+
+  }
+}
+
+.name {
+  font-size: 1rem;
+
+ 
+  font-weight: 400;
+  
+}
+
+.price{
+  font-size: 1rem;
+  font-weight: 900;
+  
+}
