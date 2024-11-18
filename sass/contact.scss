@@ -1,0 +1,133 @@
+.heroscreen {
+    padding: 1rem 0;
+
+    &__primary {
+        display: flex;
+    }
+
+    &__dropdown-menu {
+
+        border: 1px solid $color-grey;
+
+
+    }
+
+    &__nav {
+        &-main {
+
+            background-color: $text-color-secondary;
+            display: flex;
+            // flex: 1 auto;
+            align-items: end;
+            padding: .5rem .5rem .8rem 2rem;
+
+
+
+            &--text {
+                font-size: 1.1rem;
+                font-weight: bold;
+                color: white;
+            }
+
+            &--angledown-icon {
+                color: white;
+                margin-left: 1.5rem;
+            }
+
+            &--align-icon {
+                color: white;
+            }
+
+
+
+        }
+    }
+
+    &__btn--text {
+        text-transform: uppercase;
+    }
+
+    &__primary{
+        &--info{
+            display: flex;
+
+            justify-content: space-between;
+            width: 75%;
+        }
+    
+    &--search {
+
+
+        &-form {
+            display: flex;
+            border: 1px solid $color-grey;
+            align-items: center;
+            flex: 1 60%;
+            margin-right: 3rem;
+            gap: 1.5rem;
+
+        }
+
+        &-field {
+            display: flex;
+            flex: 1 auto;
+            justify-content: space-between;
+
+            &>input {
+                outline: none;
+                border: none;
+                font-family: inherit;
+            }
+        }
+    }
+    &--phone {
+        display: flex;
+
+        &>* {
+            margin: 0 .7rem;
+        }
+
+
+        &-icon {
+            display: flex;
+            align-items: center;
+        }
+
+        &-info {
+            color: grey;
+
+        }
+
+    }
+    &--category-selection {
+        display: flex;
+        align-items: center;
+
+
+        &-text {
+            font-weight: bold;
+            font-size: 1rem;
+            margin: 0 1rem;
+        }
+    }
+
+    &--btn-field {
+        display: flex;
+        align-items: center;
+
+        height: 53px;
+        font-weight: bold;
+        font-size: .8rem;
+    }
+
+    &--homeimage-box {
+        background-image: url('/img/hero.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 445px;
+        background-position: top right;
+
+
+    }
+    }
+}
