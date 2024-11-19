@@ -192,7 +192,7 @@ section {
       border: 1px solid #dfdcdc;
       align-items: center;
       flex: 1 60%;
-      margin-right: 3rem;
+      margin: 0 1rem;
       gap: 1.5rem; }
     .hero__primary--search-field {
       display: flex;
@@ -451,10 +451,59 @@ section {
 .hidden {
   display: none; }
 
+.info {
+  padding: 5rem 10rem;
+  display: flex;
+  justify-content: space-between; }
+  .info__icon {
+    width: 3rem;
+    height: 3rem; }
+    .info__icon--box {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center; }
+  .info__header {
+    font-size: 1.5rem;
+    font-weight: 700; }
+  .info__text {
+    font-size: 1rem; }
+
+.message {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.5rem; }
+  .message__input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap; }
+  .message__field {
+    margin: 1rem 0;
+    padding: 1rem;
+    max-width: 50%;
+    flex: 1 0 50%; }
+    .message__field:active {
+      border: 1px solid grey; }
+  .message__msg {
+    max-width: 100%;
+    flex: 1 0 100%; }
+  .message__submit--btn {
+    padding: 1rem 2.5rem;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 900;
+    letter-spacing: 0.2rem;
+    margin: 1rem 0; }
+
 .heroscreen {
-  padding: 1rem 0; }
+  padding: 0; }
   .heroscreen__primary {
-    display: flex; }
+    display: flex;
+    padding: 2rem 6rem; }
   .heroscreen__dropdown-menu {
     border: 1px solid #dfdcdc; }
   .heroscreen__nav-main {
@@ -482,7 +531,7 @@ section {
     border: 1px solid #dfdcdc;
     align-items: center;
     flex: 1 60%;
-    margin-right: 3rem;
+    margin: 0 3rem;
     gap: 1.5rem; }
   .heroscreen__primary--search-field {
     display: flex;
@@ -514,9 +563,57 @@ section {
     height: 53px;
     font-weight: bold;
     font-size: .8rem; }
-  .heroscreen__primary--homeimage-box {
-    background-image: url("/img/hero.png");
+  .heroscreen__container--image-box {
+    background-image: linear-gradient(to right, #464641, transparent), url("../img/tomato.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    height: 445px;
-    background-position: top right; }
+    height: 150px;
+    background-position: top right;
+    background-color: line;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    line-height: 1.3; }
+  .heroscreen__container--header-main {
+    font-size: 3rem;
+    font-weight: 900; }
+
+.products__container {
+  display: flex; }
+
+.container__left {
+  width: 25%; }
+  .container__left--header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 1.5rem 0; }
+  .container__left--nav-link {
+    text-decoration: none;
+    color: black; }
+  .container__left--nav-item {
+    list-style-type: none;
+    font-size: 1rem;
+    line-height: 2; }
+  .container__left--price-scroller {
+    width: 90%;
+    height: 2px;
+    background-color: red; }
+  .container__left--price-value {
+    margin-top: 1rem;
+    color: red;
+    font-size: 1rem;
+    font-weight: bold; }
+  .container__left--colors-item {
+    list-style-type: circle;
+    font-size: 1rem;
+    cursor: pointer; }
+
+.container__right {
+  width: 75%; }
+  .container__right--header {
+    float: left;
+    font-size: 2.5rem; }
+    .container__right--header::after {
+      width: 100%; }
