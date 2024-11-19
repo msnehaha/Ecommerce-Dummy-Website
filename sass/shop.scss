@@ -1,0 +1,64 @@
+.products__container {
+    display: flex;
+    
+}
+
+.container {
+    &__left {
+        width: 25%;
+        &--header {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 1.5rem 0;
+            
+        }
+
+        &--nav {
+            &-link {
+                text-decoration: none;
+                color: black;
+            }
+
+            &-item{
+                list-style-type: none;
+                font-size: 1rem;
+                line-height: 2;
+            }
+        }
+
+        &--price{
+            &-scroller{
+                width: 90%;
+                height: 2px;
+                background-color: red;
+            }
+
+            &-value{
+                margin-top: 1rem;
+                color: red;
+                font-size: 1rem;
+                font-weight: bold;
+            }
+        }
+
+        &--colors{
+            &-item{
+                list-style-type: circle;
+                font-size: 1rem;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__right{
+        width: 75%;
+
+        &--header{
+            float: left;
+            font-size: 2.5rem;
+            &::after{
+                width: 100%;
+            }
+        }
+    }
+}
