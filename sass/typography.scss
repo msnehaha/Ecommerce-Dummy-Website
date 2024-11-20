@@ -5,7 +5,6 @@
 
 body {
   font-family: "Cairo";
-
   font-size: 75%;
 }
 
@@ -39,6 +38,55 @@ body {
 
 .price{
   font-size: 1rem;
-  font-weight: 900;
+  font-weight: 700;
   
+}
+
+section {
+  padding: 2rem 5rem;
+}
+
+.hidden{
+  display: none;
+}
+
+.link{
+  text-decoration: none;
+  color: black;
+}
+
+.item{
+  list-style-type: none;
+}
+
+.pagination{
+  &__list{
+      display: flex;
+      margin: 2rem 0;
+
+     
+  }
+
+  &__items{
+      list-style-type: none;
+      margin-right:  0.5rem;
+      border: 1px solid rgb(226, 225, 225);
+      padding: 0.3rem 0.7rem;
+      &:hover{
+        background-color: $text-color-secondary;
+        color: white;
+        
+      }
+      
+  }
+
+  &__links{
+      text-decoration: none;
+      color:grey;
+      
+      &:hover{
+        color: white;
+        
+      }
+  }
 }

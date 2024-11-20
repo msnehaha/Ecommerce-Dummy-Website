@@ -1,0 +1,113 @@
+.blog{
+    &__container{
+        display: flex;
+    }
+    &__sidebar{
+        width: 30%;
+        &--search-field{
+            border: 1px solid $color-grey;
+            border-radius: 1.5rem;
+            display: flex;
+            align-items: center;
+            padding: 0.5rem 0.5rem;
+           margin: 5rem 1.5rem 2rem 0;
+           justify-content: space-between;
+           
+
+            &>input{
+                border: none;
+                font-family: inherit;
+                font-size: 1rem;
+            }
+        }
+
+        &--header{
+            font-size: 1.5rem;
+            font-weight: 900;
+            
+        }
+
+        &--categories
+        {
+
+            &-list{
+                margin: 1rem 0;
+            }
+            &-links{
+                font-size: 1rem;
+                color: grey;
+                line-height: 3;
+            }
+        }
+        &--news{
+            &-items{
+                display: flex;
+                margin: 1rem 0;
+                gap: 1rem;
+                
+            }
+
+            &-desc{
+                margin-right:  5rem;
+                & > h5{
+                    font-size: 1rem;
+                    line-height: 1.2;
+                    
+                }
+            }
+        }
+
+        &--search
+        {
+            &-link{
+                color: grey;
+                font-size: 1rem;
+            }
+
+            &-list{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                padding: 1.5rem;
+                margin-right: 2rem;
+                gap:2rem;
+                line-height: 1;
+            }
+        }
+        
+        
+    }
+
+    &__main{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 70%;
+        &--divider{
+            width: 100%;
+           background-color: grey;
+            height: 1px;
+        }
+    }
+    &__card
+    {
+        &-details{
+            width: 50%;
+            margin: 2rem 0;
+           
+        }
+        &--btn{
+            padding:  1rem;
+            background-color: transparent;
+            border: 1px solid grey;
+            border-radius: 2rem;
+            text-transform: uppercase;
+            margin: 1rem 0;
+            font-family: inherit;
+        }
+
+        
+    }
+    
+   
+}
