@@ -72,11 +72,11 @@
             <div class="header__secondary--nav-background">
                 <nav class="nav">
                     <ul class="nav-list">
-                        <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Shop</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Pages</a></li>
-                        <li class="nav-item"><a href="../screens/blog.html" class="nav-link">Blog</a></li>
-                        <li class="nav-item"><a href="../screens/contact.html" class="nav-link">Contact</a></li>
+                        <li class="nav-item item"><a href="../index.html" class="nav-link link">Home</a></li>
+                        <li class="nav-item item"><a href="shop.html" class="nav-link link">Shop</a></li>
+                        <li class="nav-item item"><a href="#" class="nav-link link">Pages</a></li>
+                        <li class="nav-item item"><a href="#" class="nav-link link">Blog</a></li>
+                        <li class="nav-item item"><a href="contact.html" class="nav-link link">Contact</a></li>
                     </ul>
                 </nav>
 
@@ -164,185 +164,222 @@
 
         </div>
         <div class="heroscreen__container--image-box">
-            <h1 class="heroscreen__container--header-main">Origani Shop</h1>
-            <h3 class="heroscreen__container--header-middle"><b>Home</b>- Shop</h3>
+            <h1 class="heroscreen__container--header-main">Blog</h1>
+            <h3 class="heroscreen__container--header-middle"><b>Home</b>- Blog</h3>
         </div>
 
     </section>
 
-    <section class="products__container">
-        <div class="container__left">
-            <div class="container__left--item-list">
-                <h1 class="container__left--header">Departments</h1>
-                <div class="container__left--nav">
-                    <ul class="container__left--nav-list">
-                        <a href="#" class="container__left--nav-link">
-                            <li class="container__left--nav-item item--1">Items</li>
-                        </a>
-                        <a href="#" class="container__left--nav-link">
-                            <li class="container__left--nav-item item--2">Items</li>
-                        </a>
-                        <a href="#" class="container__left--nav-link">
-                            <li class="container__left--nav-item item--3">Items</li>
-                        </a>
-                        <a href="#" class="container__left--nav-link">
-                            <li class="container__left--nav-item item--4">Items</li>
-                        </a>
-                        <a href="#" class="container__left--nav-link">
-                            <li class="container__left--nav-item item--5">Items</li>
-                        </a>
-                        <a href="#" class="container__left--nav-link">
-                            <li class="container__left--nav-item item--6">Items</li>
-                        </a>
-                    </ul>
-                </div>
+
+    <section class="blog__container">
+        <div class="blog__sidebar">
+            <div class="blog__sidebar--search-field">
+                <input type="text" placeholder="Search...">
+                <svg class="header__primary-left--email-icon icon icon-grey">
+                    <use xlink:href="../img/sprite.svg#icon-search"></use>
+                </svg>
             </div>
-            <div class="container__left--price">
-                <h1 class="container__left--header">
-                    Price
-                </h1>
-                <div class="container__left--price-scroller"></div>
-                <div class="container__left--price-value">$10 - $540</div>
-            </div>
-
-            <div class="container__left--colors">
-                <h1 class="container__left--header">Colors</h1>
-
-                <div class="container__left--colors-list">
-                    <ul class="container__left--colors-nav">
-                        <li class="container__left--colors-item container__left--colors-item-color--1">White</li>
-                        <li class="container__left--colors-item container__left--colors-item-color--2">Red</li>
-                        <li class="container__left--colors-item container__left--colors-item-color--3">Blue</li>
-                        <li class="container__left--colors-item container__left--colors-item-color--4">Grey</li>
-                        <li class="container__left--colors-item container__left--colors-item-color--5">Black</li>
-                        <li class="container__left--colors-item container__left--colors-item-color--6">Green</li>
-                    </ul>
-                </div>
-
+            <div class="blog__sidebar--catgories">
+                <h1 class="blog__sidebar--header">Categories</h1>
+                <ul class="blog__sidebar--categories-list">
+                    <li class="blog__sidebar--categories-items blog__sidebar--categories-items--item-1 item"><a href="#"
+                            class="blog__sidebar--categories-links link">All</a></li>
+                    <li class="blog__sidebar--categories-items blog__sidebar--categories-items--item-2 item"><a href="#"
+                            class="blog__sidebar--categories-links link">Beauty (20)</a></li>
+                    <li class="blog__sidebar--categories-items blog__sidebar--categories-items--item-3 item"><a href="#"
+                            class="blog__sidebar--categories-links link">Food (5)</a></li>
+                    <li class="blog__sidebar--categories-items blog__sidebar--categories-items--item-4 item"><a href="#"
+                            class="blog__sidebar--categories-links link">Life Style (9)</a></li>
+                    <li class="blog__sidebar--categories-items blog__sidebar--categories-items--item-5 item"><a href="#"
+                            class="blog__sidebar--categories-links link">Travel (10)</a></li>
+                </ul>
 
             </div>
-
-            <div class="container__left--size">
-                <h1 class="container__left--header">Popular Size</h1>
-                <div class="container__left--size-list">
-                    <ul class="container__left--size-nav">
-                        <li class="container__left--size-item item size--1">Large</li>
-                        <li class="container__left--size-item item size--2">Small</li>
-                        <li class="container__left--size-item item size--3">Medium</li>
-                        <li class="container__left--size-item item size--4">Tiny</li>
-                    </ul>
+            <div class="blog__sidebar--news">
+                <h1 class="blog__sidebar--header">Recent News</h1>
+                <div class="blog__sidebar--news-items">
+                    <div class="blog__sidebar--news-img"><img src="../img/blognews1.png" alt="News Photo"></div>
+                    <div class="blog__sidebar--news-desc">
+                        <h5>09 Kinds Of Vegetables Protect The Liver</h5>
+                        <p>Mar 05, 2019</p>
+                    </div>
+                </div>
+                <div class="blog__sidebar--news-items">
+                    <div class="blog__sidebar--news-img"><img src="../img/blognews1.png" alt="News Photo"></div>
+                    <div class="blog__sidebar--news-desc">
+                        <h5>09 Kinds Of Vegetables Protect The Liver</h5>
+                        <p>Mar 05, 2019</p>
+                    </div>
+                </div>
+                <div class="blog__sidebar--news-items">
+                    <div class="blog__sidebar--news-img"><img src="../img/blognews1.png" alt="News Photo"></div>
+                    <div class="blog__sidebar--news-desc">
+                        <h5>09 Kinds Of Vegetables Protect The Liver</h5>
+                        <p>Mar 05, 2019</p>
+                    </div>
                 </div>
             </div>
-
-        </div>
-
-        <div class="container__right">
-
-            <h1 class="section__header container__right--header">Sale Off</h1>
-            <div class="container__right--products-sale">
-                <div class="products__sale--product products__sale--product-product1">
-                    <div class="container__right--products-sale--img">
-                        <img src="../img/drinkjuice.png" alt="Drink Juice">
-                    </div>
-                    <div class="products__sale--info">
-                        <p class="products__sale--category">Fresh Juice</p>
-                        <p class="products__sale--product__name">Drink Juice</p>
-                        <h4 class="products__sale--product__price">$30.00 <del>$36.00</del></h4>
-                    </div>
-
-                </div>
-                <div class="products__sale--product products__sale--product-product2">
-                    <div class="container__right--products-sale--img">
-                        <img src="../img/drinkjuice.png" alt="Drink Juice">
-                    </div>
-                    <div class="products__sale--info">
-                        <p class="products__sale--category">Fresh Juice</p>
-                        <p class="products__sale--product__name">Drink Juice</p>
-                        <h4 class="products__sale--product__price">$30.00 <del>$36.00</del></h4>
-                    </div>
-                </div>
-                <div class="products__sale--product products__sale--product-product3">
-                    <div class="container__right--products-sale--img">
-                        <img src="../img/drinkjuice.png" alt="Drink Juice">
-                    </div>
-                    <div class="products__sale--info">
-                        <p class="products__sale--category">Fresh Juice</p>
-                        <p class="products__sale--product__name">Drink Juice</p>
-                        <h4 class="products__sale--product__price">$30.00 <del>$36.00</del></h4>
-                    </div>
-                </div>
-
-
-            </div>
-            <div class="container__right--products-sale__slider">
-                <ul class="products__sale--slider-nav">
-                    <li class="products__sale--slider-items"></li>
-                    <li class="products__sale--slider-items"></li>
+            <div class="blog__sidebar--search">
+                <h1 class="blog__sidebar--header">Search By</h1>
+                <ul class="blog__sidebar--search-list">
+                    <li class="blog__sidebar--search-item item"><a href="#"
+                            class="blog__sidebar--search-link link">Apple</a></li>
+                    <li class="blog__sidebar--search-item item"><a href="#"
+                            class="blog__sidebar--search-link link">Beauty</a></li>
+                    <li class="blog__sidebar--search-item item"><a href="#"
+                            class="blog__sidebar--search-link link">Vegetables</a></li>
+                    <li class="blog__sidebar--search-item item"><a href="#"
+                            class="blog__sidebar--search-link link">Fruit</a></li>
+                    <li class="blog__sidebar--search-item item"><a href="#"
+                            class="blog__sidebar--search-link link">Healthy Food</a></li>
+                    <li class="blog__sidebar--search-item item"><a href="#"
+                            class="blog__sidebar--search-link link">Lifestyle</a></li>
                 </ul>
             </div>
-
-            <div class="container__right--divider"></div>
-
-            <div class="container__right--products-container">
-                <div class="products__desc">
-                    <div class="products__desc--sorting">
-                        <p>Sort By</p>
-                        <p>Default</p>
-
+        </div>
+        <div class="blog__main">
+            <div class=" blog__card-details blog__card--card1">
+                <div class="blog__card--image">
+                    <img src="../img/card1img.png" alt="CardImage">
+                </div>
+                <div class="blog__card--time">
+                    <div class="blog__card--time--info">
+                        <svg class="blog__card--calendar-icon icon icon-grey">
+                            <use xlink:href="../img/sprite.svg#icon-calendar"></use>
+                        </svg>
+                        <p>May 4, 2019</p>
                     </div>
-                    <div class="products__desc--displayer">
-                        <p>16 <span>Products Found</span></p>
-                    </div>
-                    <div class="products__desc--icons">
-                        <a href="#"> <svg class="products__desc--icons-email-icon icon icon-grey">
-                                <use xlink:href="../img/sprite.svg#icon-th-large"></use>
-                            </svg></a>
-                        <a href="#"> <svg class="products__desc--icons-email-icon icon icon-grey">
-                                <use xlink:href="../img/sprite.svg#icon-list"></use>
-                            </svg></a>
+                    <div class="blog__card--comments">
+                        <svg class="blog__card--comment-icon icon icon-grey">
+                            <use xlink:href="../img/sprite.svg#icon-comment-o"></use>
+                        </svg>
+                        <p>5</p>
                     </div>
                 </div>
-                <div class="products__body">
-                    <div class="products__items item-1">
-                        <div class="products__items--image">
-                            <img src="../img/freshfruit.png" alt="Orange">
-                        </div>
-                        <h4 class="products__items--info name">Fresh Fruit</h4>
-                        <h6 class="products__items--price price">$5.00</h6>
+                <div class="blog__card--info">
+                    <a href="#" class="blog__card--header-links">
+                        <h4 class="blog__card--header">
+                            Cooking tips make cooking simple
+                        </h4>
+                    </a>
+                    <p class="blog__card--textbox">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+                        culpa dignissimos corrupti id, quo recusandae beatae et.</p>
+                        <button type="submit" class="blog__card--btn">Read More &rarr;
+                        
+                    </button>
+                      
+                </div>
+            </div>
+            <div class=" blog__card-details blog__card--card2">
+                <div class="blog__card--image">
+                    <img src="../img/card1img.png" alt="CardImage">
+                </div>
+                <div class="blog__card--time">
+                    <div class="blog__card--time--info">
+                        <svg class="blog__card--calendar-icon icon icon-grey">
+                            <use xlink:href="../img/sprite.svg#icon-calendar"></use>
+                        </svg>
+                        <p>May 4, 2019</p>
                     </div>
-                    <div class="products__items item-1">
-                        <div class="products__items--image">
-                            <img src="../img/freshfruit.png" alt="Orange">
-                        </div>
-                        <h4 class="products__items--info name">Fresh Fruit</h4>
-                        <h6 class="products__items--price price">$5.00</h6>
-                    </div>
-                    <div class="products__items item-1">
-                        <div class="products__items--image">
-                            <img src="../img/freshfruit.png" alt="Orange">
-                        </div>
-                        <h4 class="products__items--info name">Fresh Fruit</h4>
-                        <h6 class="products__items--price price">$5.00</h6>
-                    </div>
-                    <div class="products__items item-1">
-                        <div class="products__items--image">
-                            <img src="../img/freshfruit.png" alt="Orange">
-                        </div>
-                        <h4 class="products__items--info name">Fresh Fruit</h4>
-                        <h6 class="products__items--price price">$5.00</h6>
+                    <div class="blog__card--comments">
+                        <svg class="blog__card--comment-icon icon icon-grey">
+                            <use xlink:href="../img/sprite.svg#icon-comment-o"></use>
+                        </svg>
+                        <p>5</p>
                     </div>
                 </div>
-                    <div class="products__pagination">
-                        <nav class="pagination__nav">
-                            <ul class="pagination__list">
-                                <li class="pagination__items pagination__items--item-1"><a href="#" class="pagination__links">1</a></li>
-                                <li class="pagination__items pagination__items--item-2"><a href="#"class="pagination__links">2</a></li>
-                                <li class="pagination__items pagination__items--item-3"><a href="#"class="pagination__links">3</a></li>
-                                <li class="pagination__items pagination__items--item-4"><a href="#"class="pagination__links"> &rarr;</li>
-                            </ul>
-                        </nav>
+                <div class="blog__card--info">
+                    <a href="#" class="blog__card--header-links">
+                        <h4 class="blog__card--header">
+                            Cooking tips make cooking simple
+                        </h4>
+                    </a>
+                    <p class="blog__card--textbox">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+                        culpa dignissimos corrupti id, quo recusandae beatae et.</p>
+                        <button type="submit" class="blog__card--btn">Read More &rarr;
+                        
+                        </button>
+                       
+                </div>
+            </div>
+            <div class=" blog__card-details blog__card--card3">
+                <div class="blog__card--image">
+                    <img src="../img/card1img.png" alt="CardImage">
+                </div>
+                <div class="blog__card--time">
+                    <div class="blog__card--time--info">
+                        <svg class="blog__card--calendar-icon icon icon-grey">
+                            <use xlink:href="../img/sprite.svg#icon-calendar"></use>
+                        </svg>
+                        <p>May 4, 2019</p>
                     </div>
-                
+                    <div class="blog__card--comments">
+                        <svg class="blog__card--comment-icon icon icon-grey">
+                            <use xlink:href="../img/sprite.svg#icon-comment-o"></use>
+                        </svg>
+                        <p>5</p>
+                    </div>
+                </div>
+                <div class="blog__card--info">
+                    <a href="#" class="blog__card--header-links">
+                        <h4 class="blog__card--header">
+                            Cooking tips make cooking simple
+                        </h4>
+                    </a>
+                    <p class="blog__card--textbox">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+                        culpa dignissimos corrupti id, quo recusandae beatae et.</p>
+                    
+                        <button type="submit" class="blog__card--btn">Read More &rarr;
+                        
+                        </button>
+                        
+                    
+
+                </div>
+            </div>
+            <div class=" blog__card-details blog__card--card4">
+                <div class="blog__card--image">
+                    <img src="../img/card1img.png" alt="CardImage">
+                </div>
+                <div class="blog__card--time">
+                    <div class="blog__card--time--info">
+                        <svg class="blog__card--calendar-icon icon icon-grey">
+                            <use xlink:href="../img/sprite.svg#icon-calendar"></use>
+                        </svg>
+                        <p>May 4, 2019</p>
+                    </div>
+                    <div class="blog__card--comments">
+                        <svg class="blog__card--comment-icon icon icon-grey">
+                            <use xlink:href="../img/sprite.svg#icon-comment-o"></use>
+                        </svg>
+                        <p>5</p>
+                    </div>
+                </div>
+                <div class="blog__card--info">
+                    <a href="#" class="blog__card--header-links">
+                        <h4 class="blog__card--header">
+                            Cooking tips make cooking simple
+                        </h4>
+                    </a>
+                    <p class="blog__card--textbox">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+                        culpa dignissimos corrupti id, quo recusandae beatae et.</p>
+                        <button type="submit" class="blog__card--btn">Read More &rarr;
+                        
+                        </button>
+                       
+
+                </div>
+            </div>
+            <div class="blog__main--divider"></div>
+            <div class="products__pagination">
+                <nav class="pagination__nav">
+                    <ul class="pagination__list">
+                        <li class="pagination__items pagination__items--item-1"><a href="#" class="pagination__links">1</a></li>
+                        <li class="pagination__items pagination__items--item-2"><a href="#"class="pagination__links">2</a></li>
+                        <li class="pagination__items pagination__items--item-3"><a href="#"class="pagination__links">3</a></li>
+                        <li class="pagination__items pagination__items--item-4"><a href="#"class="pagination__links"> &rarr;</li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </section>
