@@ -6,28 +6,15 @@
     &__primary {
         background-color: rgba(248, 240, 240, 0.726);
         display: flex;
-        justify-content: space-around;
         align-items: center;
-        min-height: 3rem;
-        padding: 0 2rem;
+        justify-content: space-between;
+        padding: 1rem 5.5rem;
+        font-size: 0.8rem;
+       
 
         &-left {
             display: flex;
-            justify-content: center;
-            flex: 1 50%;
-            align-items: center;
-
-            &>* {
-                padding: 0 .5rem;
-            }
-
-            // &--line{
-            //     background-color: black;
-            //     // display: block;
-            //     width:.1px;
-            //     height: 2rem;
-
-            // }
+            gap:1rem;
 
             &--email {
                 display: flex;
@@ -35,22 +22,8 @@
                 gap: .5rem;
 
 
-
-                &-text {
-                    position: relative;
-
-                    &::after {
-                        background-color: black;
-                        display: block;
-                        width: 3rem;
-                        height: 4rem;
-                        position: absolute;
-                        bottom: 0;
-                        right: 0;
-                    }
-
-                }
-
+                    
+                
 
             }
 
@@ -59,21 +32,20 @@
 
         &-right {
             display: flex;
-            flex: 1 50%;
             align-items: center;
-            justify-content: end;
+            gap:1rem;
+            
 
             // text-align: center;
 
-            &>* {
-                padding: 0 1rem;
+          
 
-                &:hover {
+                & > *:hover {
                     cursor: pointer;
 
                 }
 
-            }
+            
 
             &--nationality {
                 display: flex;
@@ -88,6 +60,11 @@
             &--login {
                 display: flex;
                 align-items: center;
+            }
+
+            &--icons{
+                display: flex;
+                align-items: end;
             }
         }
     }
@@ -105,11 +82,38 @@
             // padding: 0rem 5rem;
         }
 
+        &--heart-icon, &--shoppingbag-icon{
+            position: relative; 
+        }
+
         &--icons {
             display: flex;
             justify-content: end;
             flex: 1 20%;
             gap: 2rem;
+
+            &-items{
+                display: flex;
+                align-items: center;
+                position: relative;
+               
+
+                & > span{
+                    background-color: $text-color-secondary;
+                    color: white;
+                    width: 13px;
+                    // text-align: center;
+                    border-radius: 50%;
+                    height: 13px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: absolute;
+                    top: 0;
+                    right: -12px;
+                    
+                }
+            }
         }
 
         &--logo {
@@ -117,29 +121,20 @@
             flex: 1 10%;
         }
 
-        &--heart-icon {
-            position: relative;
+        
 
-            &::after {
-                content: '1';
-                background-color: $text-color-secondary;
-                width: 1rem;
-                height: 1rem;
-                position: absolute;
-                top: 0;
-                right: 0;
-                border-radius: 50%;
-                color: white;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                z-index: 10;
-            }
-
-        }
+        
     }
 }
 
+.divider{
+    
+    content: '';
+    background-color: $color-grey;
+    width: 1px;
+    height: 20px;
+    
+}
 
 .nav {
     display: flex;
