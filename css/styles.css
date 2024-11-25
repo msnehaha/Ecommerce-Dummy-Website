@@ -88,6 +88,10 @@ section {
   .pagination__links:hover {
     color: white; }
 
+.image-primary {
+  height: 200px;
+  object-fit: cover; }
+
 .header__primary {
   background-color: rgba(248, 240, 240, 0.726);
   display: flex;
@@ -252,7 +256,8 @@ section {
       align-items: center;
       height: 53px;
       font-weight: bold;
-      font-size: .8rem; }
+      font-size: .8rem;
+      text-transform: uppercase; }
     .hero__primary--image-box {
       background-image: url("/img/hero.png");
       background-size: cover;
@@ -341,15 +346,27 @@ section {
 
 .featured__body {
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  justify-content: start; }
+
+.featured__info--links {
+  text-decoration: none;
+  color: black; }
 
 .featured__items {
-  margin: 1rem; }
+  margin: 3rem;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap; }
   .featured__items--info {
     margin-top: 3rem;
     text-align: center; }
   .featured__items--price {
     text-align: center; }
+  .featured__items--images {
+    object-fit: cover; }
 
 .banner {
   display: flex;
