@@ -178,16 +178,21 @@
    }
 
 
-   &__body {
+   &__body--shop{
     display: flex;
+    justify-content: start;
     flex-wrap: wrap;
 
 }
 
-&__items {
-    margin: 1rem;
-    display: flex;
-    flex-direction: column;
+&__items{
+    margin: 3rem;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
 
     &--info {
         margin-top: 3rem;
@@ -198,6 +203,16 @@
         text-align: center;
     }
 
+    &--image{
+        
+        height: 200px;
+        object-fit: cover;
+
+       &-box{
+      
+        width: 200px;
+       }
+    }
 
 
 }
