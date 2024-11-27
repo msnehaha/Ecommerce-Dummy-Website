@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <script type="module" src="../js/contact.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__primary">
+        <div class="header__primary-left">
+          <div class="header__primary-left--email">
+            <svg class="header__primary-left--email-icon icon">
+              <use xlink:href="../img/sprite.svg#icon-envelope"></use>
+            </svg>
+            <p class="header__primary-left--email-text">snehasth11@gmail.com</p>
+          </div>
+          <!-- <div class="header__primary-left--line"> -->
+          <div class="divider"></div>
+          <!-- </div> -->
+          <div class="header__primary-left--textbox">
+            <p class="header__primary-left--text">
+              Free Shipping for all Order of $99
+            </p>
+          </div>
+        </div>
+
+        <div class="header__primary-right">
+          <div class="header__primary-right--icons">
+            <a href="#"
+              ><svg class="header__primary-right--facebook-icon icon">
+                <use xlink:href="../img/sprite.svg#icon-facebook"></use></svg
+            ></a>
+            <a href="#">
+              <svg class="header__primary-right--whatsapp-icon icon">
+                <use xlink:href="../img/sprite.svg#icon-whatsapp"></use></svg
+            ></a>
+            <a href="#"
+              ><svg class="header__primary-right--linkedin-icon icon">
+                <use xlink:href="../img/sprite.svg#icon-linkedin"></use></svg
+            ></a>
+            <a href="#"
+              ><svg class="header__primary-right--pinterest-icon icon">
+                <use xlink:href="../img/sprite.svg#icon-pinterest-p"></use></svg
+            ></a>
+          </div>
+          <div class="divider"></div>
+          <div class="header__primary-right--nationality">
+            <div class="header__primary-right--flag">
+              <img
+                src="../img/flag.jpg"
+                alt="Flag img"
+                class="header__flag-img"
+              />
+            </div>
+            <p>English</p>
+          </div>
+          <div class="divider"></div>
+          <div class="header__primary-right--login">
+            <svg class="header__primary-right--user-icon icon">
+              <use xlink:href="../img/sprite.svg#icon-user"></use>
+            </svg>
+            <p class="header__primary-right--login-text">Login</p>
+          </div>
+        </div>
+      </div>
+      <div class="header__secondary">
+        <div class="header__secondary--logo">
+          <img src="../img/logo.png" alt="Ogani" />
+        </div>
+        <div class="header__secondary--nav-background">
+          <nav class="nav">
+            <ul class="nav-list">
+              <li class="nav-item item">
+                <a href="../index.html" class="nav-link link">Home</a>
+              </li>
+              <li class="nav-item item">
+                <a href="shop.html" class="nav-link link">Shop</a>
+              </li>
+              <li class="nav-item item">
+                <a href="#" class="nav-link link">Pages</a>
+              </li>
+              <li class="nav-item item">
+                <a href="blog.html" class="nav-link link">Blog</a>
+              </li>
+              <li class="nav-item item">
+                <a href="contact.html" class="nav-link link">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header__secondary--icons">
+          <div class="header__secondary--icons-items">
+            <a href="#"
+              ><svg class="header__secondary--heart-icon icon">
+                <use xlink:href="../img/sprite.svg#icon-heart"></use></svg
+            ></a>
+            <a href="#">
+              <svg class="header__secondary--shoppingbag-icon icon">
+                <use
+                  xlink:href="../img/sprite.svg#icon-shopping-bag"
+                ></use></svg
+            ></a>
+          </div>
+          <div class="header__secondary--info">
+            <p>item:<b>$150.00</b></p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="heroscreen">
+      <div class="heroscreen__primary">
+        <div class="heroscreen__dropdown-menu" style="height: 4.5px">
+          <div class="heroscreen__nav-main">
+            <a href="#">
+              <svg class="heroscreen__nav-main--align-icon icon">
+                <use
+                  xlink:href="../img/sprite.svg#icon-align-justify"
+                ></use></svg
+            ></a>
+
+            <p class="heroscreen__nav-main--text">All departments</p>
+
+            <a href="#">
+              <svg class="heroscreen__nav-main--angledown-icon icon">
+                <use xlink:href="../img/sprite.svg#icon-angle-down"></use></svg
+            ></a>
+          </div>
+          <div class="heroscreen__nav--box hidden">
+            <nav class="heroscreen__nav">
+              <ul class="heroscreen__nav-list">
+                <li class="heroscreen__nav-item">
+                  <a href="#" class="heroscreen__nav-link">Items</a>
+                </li>
+                <li class="heroscreen__nav-item">
+                  <a href="#" class="heroscreen__nav-link">Items</a>
+                </li>
+                <li class="heroscreen__nav-item">
+                  <a href="#" class="heroscreen__nav-link">Items</a>
+                </li>
+                <li class="heroscreen__nav-item">
+                  <a href="#" class="heroscreen__nav-link">Items</a>
+                </li>
+                <li class="heroscreen__nav-item">
+                  <a href="#" class="heroscreen__nav-link">Items</a>
+                </li>
+                <li class="heroscreen__nav-item">
+                  <a href="#" class="heroscreen__nav-link">Items</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="heroscreen__primary--info">
+          <div class="heroscreen__primary--search-form">
+            <div class="heroscreen__primary--category-selection">
+              <p class="heroscreen__primary--category-selection-text">
+                All Categories
+              </p>
+              <svg class="heroscreen__primary--angledown-icon icon">
+                <use xlink:href="../img/sprite.svg#icon-angle-down"></use>
+              </svg>
+            </div>
+            <div class="heroscreen__primary--search-field">
+              <input type="text" placeholder="What do you need?" />
+              <div class="btn heroscreen__primary--btn-field">
+                <span class="heroscreen__btn--text"> Search</span>
+              </div>
+            </div>
+          </div>
+          <div class="heroscreen__primary--phone">
+            <div class="heroscreen__primary--phone-icon">
+              <svg class="heroscreen__nav-main--align-icon icon icon-green">
+                <use xlink:href="../img/sprite.svg#icon-phone"></use>
+              </svg>
+            </div>
+            <div class="heroscreen__primary--phone-info">
+              <p class="phone-info__bold"><b>+12 345 678.999</b></p>
+              <p>support 24/7 time</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="heroscreen__container--image-box">
+        <h1 class="heroscreen__container--header-main">Shopping Cart</h1>
+        <h3 class="heroscreen__container--header-middle">
+          <b>Home</b>- Shopping Cart
+        </h3>
+      </div>
+    </section>
+    <section class="cart-details">
+      <div class="cart-details__header">
+        <h5>Products</h5>
+        <div class="cart-details__header--primary">
+          <h5>Price</h5>
+          <h5>Quantity</h5>
+          <h5>Total</h5>
+        </div>
+      </div>
+      <div class="container__divider"></div>
+      <div class="cart-details__prod--info">
+        <div class="cart-details__prod--info--title">
+          <img src="" alt="Prod Image" class="cart-details__prod--img" />
+          <p>Title</p>
+        </div>
+        <div class="cart-details__prod--details">
+          <p>$44.00</p>
+          <div class="cart-details__prod-quantity">
+            <button class="cart-details__btn cart-details__btn--subtractor">
+              -
+            </button>
+            <input type="number" value="1" />
+            <button class="cart-details__btn cart-details__btn--subtractor">
+              +
+            </button>
+          </div>
+          <p>$100.00</p>
+          <div class="cart-details__cancel">
+            <svg class="cart-details__cancel-icon icon">
+              <use xlink:href="../img/sprite.svg#icon-close"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="container__divider"></div>
+      <h5></h5>
+    </section>
+  </body>
+</html>
