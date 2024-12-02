@@ -1,3 +1,6 @@
+import { renderData } from "./view.js";
+const parentElement = document.querySelector('.prod-details__body');
+
 export const prodDetailsView = function(data)
 {
     

@@ -1,12 +1,17 @@
 * {
   margin: 0;
   padding: 0;
-  //  box-sizing: border-box;
+//  box-sizing: border-box;
 }
 
 body {
   font-family: "Cairo";
-  font-size: 75%;
+  font-size: 62.5%;
+
+  @include respond (laptop)
+  {
+    font-size: 50%;
+  }
 }
 
 .section__header {
@@ -16,7 +21,7 @@ body {
   font-weight: 900;
 
   &::after {
-    content: "";
+    content: '';
     background-color: $text-color-secondary;
     width: 70px;
     height: 0.2rem;
@@ -24,65 +29,76 @@ body {
     bottom: 0;
     left: 50%;
     transform: translate(-50%);
+
+
   }
 }
 
 .name {
   font-size: 1rem;
 
+ 
   font-weight: 400;
+  
 }
 
-.price {
+.price{
   font-size: 1rem;
   font-weight: 700;
+  
 }
 
 section {
   padding: 2rem 5rem;
 }
 
-.hidden {
+.hidden{
   display: none;
 }
 
-.link {
+.link{
   text-decoration: none;
   color: black;
 }
 
-.item {
+.item{
   list-style-type: none;
 }
 
-.pagination {
-  &__list {
-    display: flex;
-    margin: 2rem 0;
+.pagination{
+  &__list{
+      display: flex;
+      margin: 2rem 0;
+
+     
   }
 
-  &__items {
-    list-style-type: none;
-    margin-right: 0.5rem;
-    border: 1px solid rgb(226, 225, 225);
-    padding: 0.3rem 0.7rem;
-    &:hover {
-      background-color: $text-color-secondary;
-      color: white;
-    }
+  &__items{
+      list-style-type: none;
+      margin-right:  0.5rem;
+      border: 1px solid rgb(226, 225, 225);
+      padding: 0.3rem 0.7rem;
+      &:hover{
+        background-color: $text-color-secondary;
+        color: white;
+        
+      }
+      
   }
 
-  &__links {
-    text-decoration: none;
-    color: grey;
-
-    &:hover {
-      color: white;
-    }
+  &__links{
+      text-decoration: none;
+      color:grey;
+      
+      &:hover{
+        color: white;
+        
+      }
   }
 }
 
-.image-primary {
+.image-primary{
+ 
   height: 200px;
-  object-fit: cover;
+object-fit: cover;
 }

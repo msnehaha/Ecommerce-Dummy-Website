@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet" />
-    <script type="module" src="js/index.js"></script>
+    <script type="module" src="js/controller.js"></script>
 </head>
 
 <body>
@@ -69,7 +69,7 @@
         </div>
         <div class="header__secondary">
             <div class="header__secondary--logo">
-                <img src="img/logo.png" alt="Ogani">
+                <img src="img/logo.png" alt="Ogani" >
             </div>
             <div class="header__secondary--nav-background">
                 <nav class="nav">
@@ -106,7 +106,7 @@
     <section class="hero">
         <div class="hero__container">
             <div class="hero__dropdown-menu">
-                <div class="hero__nav-main">
+                <div class="hero__nav-main" >
                     <a href="#"> <svg class=" hero__nav-main--align-icon icon icon-white">
                             <use xlink:href="img/sprite.svg#icon-align-justify"></use>
                         </svg></a>
@@ -119,7 +119,11 @@
                 </div>
                 <nav class="hero__nav">
                     <ul class="hero__nav-list">
-                        
+                        <li class="hero__nav-item"><a href="#" class="hero__nav-link">All</a></li>
+                        <li class="hero__nav-item"><a href="#" class="hero__nav-link">Groceries</a></li>
+                        <li class="hero__nav-item"><a href="#" class="hero__nav-link">Beauty</a></li>
+                        <li class="hero__nav-item"><a href="#" class="hero__nav-link">Furniture</a></li>
+                        <li class="hero__nav-item"><a href="#" class="hero__nav-link">Fragrance</a></li>
                        
                     </ul>
                 </nav>
@@ -186,28 +190,28 @@
             <div class="categories__items--list">
                 <div class="categories__items item-1">
                     <div class="categories__items--image">
-                        <img src="img/freshfruit.png" alt="Orange">
+                        <img src="img/freshfruit.png" alt="Orange" class="categories__items--image-img">
                     </div>
 
                     <h4 class="categories__items--info">Fresh Fruit</h4>
                 </div>
                 <div class="categories__items item-2">
                     <div class="categories__items--image">
-                        <img src="img/freshmeat.png" alt="freshmeat">
+                        <img src="img/freshmeat.png" alt="freshmeat"  class="categories__items--image-img">
                     </div>
 
                     <h4 class="categories__items--info">Fresh Meat</h4>
                 </div>
                 <div class="categories__items item-3">
                     <div class="categories__items--image">
-                        <img src="img/vegetables.png" alt="Vegetables">
+                        <img src="img/vegetables.png" alt="Vegetables" class="categories__items--image-img">
                     </div>
 
                     <h4 class="categories__items--info">Vegetables</h4>
                 </div>
                 <div class="categories__items item-4">
                     <div class="categories__items--image">
-                        <img src="img/drinkjuice.png" alt="DrinkJuice">
+                        <img src="img/drinkjuice.png" alt="DrinkJuice" class="categories__items--image-img">
                     </div>
 
                     <h4 class="categories__items--info">Drink Juice</h4>
@@ -248,6 +252,16 @@
 
             
 
+        </div>
+        <div class="products__pagination--home">
+            <nav class="pagination__nav">
+                <ul class="pagination__list">
+                    <li class="pagination__items pagination__items--item-1"><a href="#" class="pagination__links">1</a></li>
+                    <li class="pagination__items pagination__items--item-2"><a href="#"class="pagination__links">2</a></li>
+                    <li class="pagination__items pagination__items--item-3"><a href="#"class="pagination__links">3</a></li>
+                    <li class="pagination__items pagination__items--item-4"><a href="#"class="pagination__links"> &rarr;</li>
+                </ul>
+            </nav>
         </div>
     </section>
 

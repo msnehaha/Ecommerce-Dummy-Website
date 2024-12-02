@@ -1,73 +1,73 @@
-.info {
-  padding: 5rem 10rem;
-  display: flex;
-  justify-content: space-between;
-  @include respond(big-desktop) {
-    justify-content: space-around;
-  }
-  &__icon {
-    width: 3rem;
-    height: 3rem;
+.info{
+    padding: 5rem 10rem;
+    display: flex;
+    justify-content: space-between;
+    &__icon{
+        width: 3rem;
+        height: 3rem;
 
-    &--box {
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      text-align: center;
+        &--box{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+        }
     }
-  }
 
-  &__header {
-    font-size: 1.5rem;
-    font-weight: 700;
-  }
+    &__header{
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
 
-  &__text {
-    font-size: 1rem;
-  }
+    &__text{
+        font-size: 1rem;
+    }
 }
 
-.message {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  font-size: 1.5rem;
-
-  &__input {
+.message{
     display: flex;
-    // justify-content: center;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    flex-wrap: wrap;
-  }
+    font-size: 1.5rem;
 
-  &__field {
-    margin: 1rem 0;
-    padding: 1rem;
-    min-width: 50%;
-    flex: 1 0 50%;
-    &:active {
-      border: 1px solid grey;
+    &__input{
+        display: flex;
+        // justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      width: 100%;
+      flex-wrap: wrap;
     }
-  }
-  &__msg {
-    max-width: 100%;
-    flex: 1 0 100%;
-  }
 
-  &__submit--btn {
-    padding: 1rem 2.5rem;
-    text-transform: uppercase;
-    font-size: 1rem;
-    font-weight: 900;
-    letter-spacing: 0.2rem;
-    margin: 1rem 0;
-  }
+    &__field{
+        margin: 1rem 0;
+        padding: 1rem;
+       max-width: 50%;
+       flex: 1 0 50%;
+       &:active{
+        border: 1px solid grey;
+       }
+       
+    }
+    &__msg{
+        max-width: 100%;
+        flex:1 0 100%;
+    }
+
+    &__submit--btn{
+        padding: 1rem 2.5rem;
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: 900;
+        letter-spacing: 0.2rem;
+        margin: 1rem 0;
+    }
+
+  
 }
 
-#map {
-  height: 80vh;
-  width: 100%;
-}
+#map{
+    height: 80vh;
+    width: 100%;
+}   
