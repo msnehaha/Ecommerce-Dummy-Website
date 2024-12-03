@@ -11,7 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap"
       rel="stylesheet"
     />
-    <script type="module" src="../js/prod-details.js"></script>
+    <script type="module" src="../js/controller.js"></script>
   </head>
   <body>
     <header class="header">
@@ -118,85 +118,74 @@
     </header>
 
     <section class="heroscreen">
+
+
       <div class="heroscreen__primary">
-        <div class="heroscreen__dropdown-menu" style="height: 4.5px">
-          <div class="heroscreen__nav-main">
-            <a href="#">
-              <svg class="heroscreen__nav-main--align-icon icon">
-                <use
-                  xlink:href="../img/sprite.svg#icon-align-justify"
-                ></use></svg
-            ></a>
+          <div class="heroscreen__dropdown-menu" style="height: 4.5px;">
+              <div class="heroscreen__nav-main">
+                  <a href="#"> <svg class=" heroscreen__nav-main--align-icon icon icon-white">
+                          <use xlink:href="../img/sprite.svg#icon-align-justify"></use>
+                      </svg></a>
 
-            <p class="heroscreen__nav-main--text">All departments</p>
+                  <p class="heroscreen__nav-main--text">All departments</p>
 
-            <a href="#">
-              <svg class="heroscreen__nav-main--angledown-icon icon">
-                <use xlink:href="../img/sprite.svg#icon-angle-down"></use></svg
-            ></a>
-          </div>
-          <div class="heroscreen__nav--box hidden">
-            <nav class="heroscreen__nav">
-              <ul class="heroscreen__nav-list">
-                <li class="heroscreen__nav-item">
-                  <a href="#" class="heroscreen__nav-link">Items</a>
-                </li>
-                <li class="heroscreen__nav-item">
-                  <a href="#" class="heroscreen__nav-link">Items</a>
-                </li>
-                <li class="heroscreen__nav-item">
-                  <a href="#" class="heroscreen__nav-link">Items</a>
-                </li>
-                <li class="heroscreen__nav-item">
-                  <a href="#" class="heroscreen__nav-link">Items</a>
-                </li>
-                <li class="heroscreen__nav-item">
-                  <a href="#" class="heroscreen__nav-link">Items</a>
-                </li>
-                <li class="heroscreen__nav-item">
-                  <a href="#" class="heroscreen__nav-link">Items</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-        <div class="heroscreen__primary--info">
-          <div class="heroscreen__primary--search-form">
-            <div class="heroscreen__primary--category-selection">
-              <p class="heroscreen__primary--category-selection-text">
-                All Categories
-              </p>
-              <svg class="heroscreen__primary--angledown-icon icon">
-                <use xlink:href="../img/sprite.svg#icon-angle-down"></use>
-              </svg>
-            </div>
-            <div class="heroscreen__primary--search-field">
-              <input type="text" placeholder="What do you need?" />
-              <div class="btn heroscreen__primary--btn-field">
-                <span class="heroscreen__btn--text"> Search</span>
+                  <a href="#"> <svg class=" heroscreen__nav-main--angledown-icon icon icon-white">
+                          <use xlink:href="../img/sprite.svg#icon-angle-down"></use>
+                      </svg></a>
               </div>
-            </div>
+              <div class="heroscreen__nav--box hidden">
+                  <nav class="heroscreen__nav">
+                      <ul class="heroscreen__nav-list">
+                          <li class="heroscreen__nav-item"><a href="#" class="heroscreen__nav-link">Items</a></li>
+                          <li class="heroscreen__nav-item"><a href="#" class="heroscreen__nav-link">Items</a></li>
+                          <li class="heroscreen__nav-item"><a href="#" class="heroscreen__nav-link">Items</a></li>
+                          <li class="heroscreen__nav-item"><a href="#" class="heroscreen__nav-link">Items</a></li>
+                          <li class="heroscreen__nav-item"><a href="#" class="heroscreen__nav-link">Items</a></li>
+                          <li class="heroscreen__nav-item"><a href="#" class="heroscreen__nav-link">Items</a></li>
+                      </ul>
+                  </nav>
+              </div>
+
           </div>
-          <div class="heroscreen__primary--phone">
-            <div class="heroscreen__primary--phone-icon">
-              <svg class="heroscreen__nav-main--align-icon icon icon-green">
-                <use xlink:href="../img/sprite.svg#icon-phone"></use>
-              </svg>
-            </div>
-            <div class="heroscreen__primary--phone-info">
-              <p class="phone-info__bold"><b>+12 345 678.999</b></p>
-              <p>support 24/7 time</p>
-            </div>
+          <div class="heroscreen__primary--info">
+              <div class="heroscreen__primary--search-form">
+                  <div class="heroscreen__primary--category-selection">
+                      <p class="heroscreen__primary--category-selection-text">
+                          All Categories
+                      </p>
+                      <svg class=" heroscreen__primary--angledown-icon icon">
+                          <use xlink:href="../img/sprite.svg#icon-angle-down"></use>
+                      </svg>
+                  </div>
+                  <div class="heroscreen__primary--search-field">
+                      <input type="text" placeholder="What do you need?">
+                      <div class="btn heroscreen__primary--btn-field">
+                          <span class="heroscreen__btn--text"> Search</span>
+                      </div>
+                  </div>
+
+              </div>
+              <div class="heroscreen__primary--phone">
+                  <div class="heroscreen__primary--phone-icon">
+                      <svg class=" heroscreen__nav-main--align-icon icon icon-green">
+                          <use xlink:href="../img/sprite.svg#icon-phone"></use>
+                      </svg>
+                  </div>
+                  <div class="heroscreen__primary--phone-info">
+                      <p class="phone-info__bold"><b>+12 345 678.999</b></p>
+                      <p>support 24/7 time</p>
+                  </div>
+
+              </div>
           </div>
-        </div>
+
       </div>
       <div class="heroscreen__container--image-box">
-        <h1 class="heroscreen__container--header-main">Vegetable's Package</h1>
-        <h3 class="heroscreen__container--header-middle">
-          <b>Home</b>- <b>Vegetables</b>-Vegetable's Package
-        </h3>
+          <h1 class="heroscreen__container--header-main">Vegetable's Package</h1>
+          <h3 class="heroscreen__container--header-middle"><b>Home</b>- Package</h3>
       </div>
-    </section>
+
+  </section>
 
     <section class="prod-details__body">
       <!-- <div class="prod-details__body--left">

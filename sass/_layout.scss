@@ -150,10 +150,15 @@
       display: flex;
       justify-content: center;
     }
+    
   
     &__container {
       padding: 0rem 6rem;
       display: flex;
+      @include respond(tab-port)
+      {
+        flex-direction:  column;
+      }
   
       @include respond(big-desktop) {
         width: 70%;
@@ -177,20 +182,23 @@
         // flex: 1 auto;
         align-items: end;
         padding: 0.5rem 0.5rem 0.5rem 2rem;
+
+        @include respond(tab-port)
+        {
+          justify-content: space-between;
+
+        }
   
         &--text {
           font-size: 1.1rem;
           font-weight: bold;
           color: white;
 
-          @include respond(laptop)
-          {
-            font-size: 0.8rem;
-          }
+      
 
           @include respond(tab-land)
           {
-            font-size: 0.7rem;
+            font-size: 0.8rem;
           }
         }
   
@@ -219,6 +227,12 @@
     &__primary {
       width: 75%;
       padding: 0 1rem;
+
+      @include respond(tab-port)
+      {
+        width: 100%;
+        margin-top: 1rem;
+      }
   
       &--info {
         display: flex;
@@ -275,6 +289,10 @@
           font-weight: bold;
           font-size: 1rem;
           margin: 0 1rem;
+          @include respond(tab-port)
+          {
+            font-size: 0.8rem;
+          }
         }
       }
   
@@ -388,10 +406,10 @@
 
       &--image{
         &-img{
-          @include respond(laptop)
+          @include respond(tab-land)
           {
-            width: 150px;
-            height: 150px;
+            width: 125px;
+            height: 125px;
   
           }
         }
@@ -470,6 +488,10 @@
       @include respond(big-desktop) {
         width: 300px;
       }
+      @include respond(tab-land)
+      {
+        width: 150px;
+      }
   
       &--info {
         margin-top: 3rem;
@@ -493,9 +515,22 @@
     display: flex;
     justify-content: center;
     gap: 2rem;
+    @include respond(tab-port)
+    {
+      flex-direction: column;
+      align-items: center;
+    }
   
     @include respond(big-desktop) {
       gap: 4rem;
+    }
+    &__image{
+      @include respond (tab-land)
+      {
+        width: 300px;
+      }
+
+    
     }
   }
   
@@ -517,6 +552,10 @@
       align-items: center;
       font-size: 1rem;
       justify-content: space-between;
+      @include respond (tab-land)
+      {
+        font-size: 0.7rem;
+      }
     }
   
     &__column {
@@ -525,6 +564,11 @@
       @include respond(big-desktop)
       {
         width: 15%;
+      }
+
+      @include respond(tab-land)
+      {
+        width: 30%;
       }
     }
   
@@ -571,13 +615,43 @@
       @include respond(big-desktop) {
         justify-content: space-around;
       }
+      @include respond(tab-port)
+      {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+      }
     }
+
+   
   
     &__card {
       width: 30%;
+      display: flex;
+      flex-direction: column;
+      
   
       @include respond(big-desktop) {
-        width: 15%;
+        width: 20%;
+      }
+      @include respond(tab-land)
+      {
+        width:  20%;
+      }
+      @include respond(tab-port)
+      {
+        width: 60%;
+      }
+
+      &--img{
+        @include respond(tab-land)
+        {
+          width: 200px;
+        }
+        @include respond(tab-port)
+        {
+          width: 400px;
+        }
       }
       &--time {
         display: flex;
@@ -628,9 +702,19 @@
     @include respond(big-desktop) {
       justify-content: space-around;
     }
+
+    @include respond(tab-land)
+    {
+      display: block;
+    }
   
     &__info {
       font-size: 1rem;
+
+      @include respond(tab-land)
+      {
+        font-size: 0.7rem;
+      }
   
       &--image {
         margin-bottom: 1rem;
@@ -643,6 +727,16 @@
         gap: 3rem;
         font-size: 0.9rem;
         margin-top: 0.5rem;
+        @include respond(tab-land)
+        {
+          font-size: 0.7rem;
+        }
+      }
+      &--info{
+        @include respond (tab-land)
+        {
+          margin-top: 2rem;
+        }
       }
   
       &--link {
@@ -654,9 +748,19 @@
     }
   
     &__query {
+      @include respond(tab-land)
+      {
+        margin-top: 2rem;
+      }
       &--text {
         font-size: 0.9rem;
         margin: 0.3rem 0 1.5rem 0;
+@include respond(tab-land)
+{
+  font-size: 0.7rem;
+  
+}
+
       }
       &--input {
         display: flex;
