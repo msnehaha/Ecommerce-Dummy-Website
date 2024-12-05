@@ -888,11 +888,11 @@ section {
     display: flex; }
     .container__right--products-sale__slider {
       width: 100%; }
-  .container__right--divider {
-    width: 100%;
-    background-color: lightgrey;
-    height: 1px;
-    margin-top: 2rem; }
+
+.container__divider {
+  width: 100%;
+  background-color: lightgrey;
+  height: 1px; }
 
 .products__sale--product {
   display: flex;
@@ -1059,9 +1059,10 @@ section {
   justify-content: space-between;
   width: 50%;
   font-weight: 700; }
-  .cart-details__prod--details--img {
-    width: 100px;
-    height: 100px; }
+
+.cart-details__prod--img {
+  width: 100px;
+  height: 100px; }
 
 .cart-details__prod-quantity {
   padding: 1rem 0rem;

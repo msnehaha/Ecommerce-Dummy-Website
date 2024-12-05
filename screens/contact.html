@@ -1,341 +1,375 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet" />
-    
-<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap"
+      rel="stylesheet"
+    />
 
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
-<script type="module" src="../js/controller.js"></script>
-</head>
+    <script type="module" src="../js/controller.js" defer></script>
+  </head>
 
-<body>
+  <body>
     <header class="header">
-        <div class="header__primary">
+      <div class="header__primary">
+        <div class="header__primary-left">
+          <div class="header__primary-left--email">
+            <svg class="header__primary-left--email-icon icon">
+              <use xlink:href="../img/sprite.svg#icon-envelope"></use>
+            </svg>
+            <p class="header__primary-left--email-text">snehasth11@gmail.com</p>
+          </div>
+          <!-- <div class="header__primary-left--line"> -->
 
-            <div class="header__primary-left">
-                <div class="header__primary-left--email">
-                    <svg class="header__primary-left--email-icon icon">
-                        <use xlink:href="../img/sprite.svg#icon-envelope"></use>
-                    </svg>
-                    <p class="header__primary-left--email-text">snehasth11@gmail.com</p>
-                </div>
-                <!-- <div class="header__primary-left--line"> -->
-
-                <!-- </div> -->
-                <div class="header__primary-left--textbox">
-                    <p class="header__primary-left--text">
-                        Free Shipping for all Order of $99
-                    </p>
-                </div>
-            </div>
-
-
-            <div class="header__primary-right">
-                <div class="header__primary-right--icons">
-                    <a href="#"><svg class=" header__primary-right--facebook-icon icon">
-                            <use xlink:href="../img/sprite.svg#icon-facebook"></use>
-                        </svg></a>
-                    <a href="#"> <svg class=" header__primary-right--whatsapp-icon icon">
-                            <use xlink:href="../img/sprite.svg#icon-whatsapp"></use>
-                        </svg></a>
-                    <a href="#"><svg class=" header__primary-right--linkedin-icon icon">
-                            <use xlink:href="../img/sprite.svg#icon-linkedin"></use>
-                        </svg></a>
-                    <a href="#"><svg class=" header__primary-right--pinterest-icon icon">
-                            <use xlink:href="../img/sprite.svg#icon-pinterest-p"></use>
-                        </svg></a>
-
-
-                </div>
-                <div class="header__primary-right--nationality">
-                    <div class="header__primary-right--flag ">
-                        <img src="../img/flag.jpg" alt="Flag img" class="header__flag-img">
-                    </div>
-                    <p>English</p>
-                </div>
-                <div class="header__primary-right--login">
-                    <svg class=" header__primary-right--user-icon icon">
-                        <use xlink:href="../img/sprite.svg#icon-user"></use>
-                    </svg>
-                    <p class="header__primary-right--login-text">Login</p>
-                </div>
-            </div>
+          <!-- </div> -->
+          <div class="header__primary-left--textbox">
+            <p class="header__primary-left--text">
+              Free Shipping for all Order of $99
+            </p>
+          </div>
         </div>
-        <div class="header__secondary">
-            <div class="header__secondary--logo">
-                <img src="../img/logo.png" alt="Ogani">
-            </div>
-            <div class="header__secondary--nav-background">
-                <nav class="nav">
-                    <ul class="nav-list">
-                        <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
-                        <li class="nav-item"><a href="../screens/shop.html" class="nav-link">Shop</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Pages</a></li>
-                        <li class="nav-item"><a href="../screens/blog.html" class="nav-link">Blog</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
-                    </ul>
-                </nav>
 
-
+        <div class="header__primary-right">
+          <div class="header__primary-right--icons">
+            <a href="#"
+              ><svg class="header__primary-right--facebook-icon icon">
+                <use xlink:href="../img/sprite.svg#icon-facebook"></use></svg
+            ></a>
+            <a href="#">
+              <svg class="header__primary-right--whatsapp-icon icon">
+                <use xlink:href="../img/sprite.svg#icon-whatsapp"></use></svg
+            ></a>
+            <a href="#"
+              ><svg class="header__primary-right--linkedin-icon icon">
+                <use xlink:href="../img/sprite.svg#icon-linkedin"></use></svg
+            ></a>
+            <a href="#"
+              ><svg class="header__primary-right--pinterest-icon icon">
+                <use xlink:href="../img/sprite.svg#icon-pinterest-p"></use></svg
+            ></a>
+          </div>
+          <div class="header__primary-right--nationality">
+            <div class="header__primary-right--flag">
+              <img
+                src="../img/flag.jpg"
+                alt="Flag img"
+                class="header__flag-img"
+              />
             </div>
-            <div class="header__secondary--icons">
-                <div class="header__secondary--icons-items">
-                    <a href="#"><svg class=" header__secondary--heart-icon icon">
-                            <use xlink:href="../img/sprite.svg#icon-heart"></use>
-                        </svg></a>
-                    <a href="#"> <svg class=" header__secondary--shoppingbag-icon icon">
-                            <use xlink:href="../img/sprite.svg#icon-shopping-bag"></use>
-                        </svg></a>
-                </div>
-                <div class="header__secondary--info">
-                    <p>item:<b>$150.00</b></p>
-                </div>
-
-            </div>
+            <p>English</p>
+          </div>
+          <div class="header__primary-right--login">
+            <svg class="header__primary-right--user-icon icon">
+              <use xlink:href="../img/sprite.svg#icon-user"></use>
+            </svg>
+            <p class="header__primary-right--login-text">Login</p>
+          </div>
         </div>
+      </div>
+      <div class="header__secondary">
+        <div class="header__secondary--logo">
+          <img src="../img/logo.png" alt="Ogani" />
+        </div>
+        <div class="header__secondary--nav-background">
+          <nav class="nav">
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a href="../index.html" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="../screens/shop.html" class="nav-link">Shop</a>
+              </li>
+              <li class="nav-item"><a href="#" class="nav-link">Pages</a></li>
+              <li class="nav-item">
+                <a href="../screens/blog.html" class="nav-link">Blog</a>
+              </li>
+              <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header__secondary--icons">
+          <div class="header__secondary--icons-items">
+            <a href="#"
+              ><svg class="header__secondary--heart-icon icon">
+                <use xlink:href="../img/sprite.svg#icon-heart"></use></svg
+            ></a>
+            <a href="#">
+              <svg class="header__secondary--shoppingbag-icon icon">
+                <use
+                  xlink:href="../img/sprite.svg#icon-shopping-bag"
+                ></use></svg
+            ></a>
+          </div>
+          <div class="header__secondary--info">
+            <p>item:<b>$150.00</b></p>
+          </div>
+        </div>
+      </div>
     </header>
 
-
     <section class="heroscreen">
+      <div class="heroscreen__primary">
+        <div class="heroscreen__dropdown-menu" style="height: 4.5px">
+          <div class="heroscreen__nav-main">
+            <a href="#">
+              <svg class="heroscreen__nav-main--align-icon icon icon-white">
+                <use
+                  xlink:href="../img/sprite.svg#icon-align-justify"
+                ></use></svg
+            ></a>
 
+            <p class="heroscreen__nav-main--text">All departments</p>
 
-        <div class="heroscreen__primary">
-            <div class="heroscreen__dropdown-menu" style="height: 4.5px;">
-                <div class="heroscreen__nav-main">
-                    <a href="#"> <svg class=" heroscreen__nav-main--align-icon icon icon-white">
-                            <use xlink:href="../img/sprite.svg#icon-align-justify"></use>
-                        </svg></a>
-
-                    <p class="heroscreen__nav-main--text">All departments</p>
-
-                    <a href="#"> <svg class=" heroscreen__nav-main--angledown-icon icon icon-white">
-                            <use xlink:href="../img/sprite.svg#icon-angle-down"></use>
-                        </svg></a>
-                </div>
-                <div class="heroscreen__nav--box hidden">
-                    <nav class="heroscreen__nav">
-                        <ul class="heroscreen__nav-list">
-                            <li class="heroscreen__nav-item"><a href="#" class="heroscreen__nav-link">Items</a></li>
-                            <li class="heroscreen__nav-item"><a href="#" class="heroscreen__nav-link">Items</a></li>
-                            <li class="heroscreen__nav-item"><a href="#" class="heroscreen__nav-link">Items</a></li>
-                            <li class="heroscreen__nav-item"><a href="#" class="heroscreen__nav-link">Items</a></li>
-                            <li class="heroscreen__nav-item"><a href="#" class="heroscreen__nav-link">Items</a></li>
-                            <li class="heroscreen__nav-item"><a href="#" class="heroscreen__nav-link">Items</a></li>
-                        </ul>
-                    </nav>
-                </div>
-
-            </div>
-            <div class="heroscreen__primary--info">
-                <div class="heroscreen__primary--search-form">
-                    <div class="heroscreen__primary--category-selection">
-                        <p class="heroscreen__primary--category-selection-text">
-                            All Categories
-                        </p>
-                        <svg class=" heroscreen__primary--angledown-icon icon">
-                            <use xlink:href="../img/sprite.svg#icon-angle-down"></use>
-                        </svg>
-                    </div>
-                    <div class="heroscreen__primary--search-field">
-                        <input type="text" placeholder="What do you need?">
-                        <div class="btn heroscreen__primary--btn-field">
-                            <span class="heroscreen__btn--text"> Search</span>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="heroscreen__primary--phone">
-                    <div class="heroscreen__primary--phone-icon">
-                        <svg class=" heroscreen__nav-main--align-icon icon icon-green">
-                            <use xlink:href="../img/sprite.svg#icon-phone"></use>
-                        </svg>
-                    </div>
-                    <div class="heroscreen__primary--phone-info">
-                        <p class="phone-info__bold"><b>+12 345 678.999</b></p>
-                        <p>support 24/7 time</p>
-                    </div>
-
-                </div>
-            </div>
-
+            <a href="#">
+              <svg class="heroscreen__nav-main--angledown-icon icon icon-white">
+                <use xlink:href="../img/sprite.svg#icon-angle-down"></use></svg
+            ></a>
+          </div>
+          <div class="heroscreen__nav--box hidden">
+            <nav class="heroscreen__nav">
+              <ul class="heroscreen__nav-list">
+                <li class="heroscreen__nav-item">
+                  <a href="#" class="heroscreen__nav-link">Items</a>
+                </li>
+                <li class="heroscreen__nav-item">
+                  <a href="#" class="heroscreen__nav-link">Items</a>
+                </li>
+                <li class="heroscreen__nav-item">
+                  <a href="#" class="heroscreen__nav-link">Items</a>
+                </li>
+                <li class="heroscreen__nav-item">
+                  <a href="#" class="heroscreen__nav-link">Items</a>
+                </li>
+                <li class="heroscreen__nav-item">
+                  <a href="#" class="heroscreen__nav-link">Items</a>
+                </li>
+                <li class="heroscreen__nav-item">
+                  <a href="#" class="heroscreen__nav-link">Items</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
-        <div class="heroscreen__container--image-box">
-            <h1 class="heroscreen__container--header-main">Blog</h1>
-            <h3 class="heroscreen__container--header-middle"><b>Home</b>- Blog</h3>
+        <div class="heroscreen__primary--info">
+          <div class="heroscreen__primary--search-form">
+            <div class="heroscreen__primary--category-selection">
+              <p class="heroscreen__primary--category-selection-text">
+                All Categories
+              </p>
+              <svg class="heroscreen__primary--angledown-icon icon">
+                <use xlink:href="../img/sprite.svg#icon-angle-down"></use>
+              </svg>
+            </div>
+            <div class="heroscreen__primary--search-field">
+              <input type="text" placeholder="What do you need?" />
+              <div class="btn heroscreen__primary--btn-field">
+                <span class="heroscreen__btn--text"> Search</span>
+              </div>
+            </div>
+          </div>
+          <div class="heroscreen__primary--phone">
+            <div class="heroscreen__primary--phone-icon">
+              <svg class="heroscreen__nav-main--align-icon icon icon-green">
+                <use xlink:href="../img/sprite.svg#icon-phone"></use>
+              </svg>
+            </div>
+            <div class="heroscreen__primary--phone-info">
+              <p class="phone-info__bold"><b>+12 345 678.999</b></p>
+              <p>support 24/7 time</p>
+            </div>
+          </div>
         </div>
-
+      </div>
+      <div class="heroscreen__container--image-box">
+        <h1 class="heroscreen__container--header-main">Blog</h1>
+        <h3 class="heroscreen__container--header-middle"><b>Home</b>- Blog</h3>
+      </div>
     </section>
 
-
-<section class="info">
-    <div class="info__icon--box ">
+    <section class="info">
+      <div class="info__icon--box">
         <div>
-            <svg class="info__phone-icon info__icon icon-green">
-                <use xlink:href="../img/sprite.svg#icon-phone"></use>
-            </svg>
+          <svg class="info__phone-icon info__icon icon-green">
+            <use xlink:href="../img/sprite.svg#icon-phone"></use>
+          </svg>
         </div>
-        
+
         <h5 class="info__header">Phone</h5>
         <p class="info__text">+123 456 789</p>
-    </div>
-    <div class="info__icon--box ">
+      </div>
+      <div class="info__icon--box">
         <div>
-            <svg class="info__phone-icon info__icon icon-green">
-                <use xlink:href="../img/sprite.svg#icon-map-marker"></use>
-            </svg>
+          <svg class="info__phone-icon info__icon icon-green">
+            <use xlink:href="../img/sprite.svg#icon-map-marker"></use>
+          </svg>
         </div>
-       
+
         <h5 class="info__header">Address</h5>
         <p class="info__text">Panipokhari, Kathmandu</p>
-    </div>
-    <div class="info__icon--box ">
+      </div>
+      <div class="info__icon--box">
         <div>
-            <svg class="info__phone-icon info__icon icon-green">
-                <use xlink:href="../img/sprite.svg#icon-clock-o"></use>
-            </svg>
+          <svg class="info__phone-icon info__icon icon-green">
+            <use xlink:href="../img/sprite.svg#icon-clock-o"></use>
+          </svg>
         </div>
-        
+
         <h5 class="info__header">Open Time</h5>
         <p class="info__text">10:00 am to 5:00pm</p>
-    </div>
-    <div class="info__icon--box ">
-        <div >
-            <svg class="info__phone-icon info__icon icon-green ">
-                <use xlink:href="../img/sprite.svg#icon-envelope"></use>
-            </svg>
+      </div>
+      <div class="info__icon--box">
+        <div>
+          <svg class="info__phone-icon info__icon icon-green">
+            <use xlink:href="../img/sprite.svg#icon-envelope"></use>
+          </svg>
         </div>
-       
+
         <h5 class="info__header">Email</h5>
         <p class="info__text">abcdef@gmail.com</p>
-    </div>
+      </div>
+    </section>
 
-</section>
+    <div id="map"></div>
 
- <div id="map"></div>
+    <section class="message">
+      <h1 class="message__header">Leave Message</h1>
+      <div class="message__input">
+        <input
+          type="text"
+          placeholder="Your Name"
+          class="message__name message__field"
+        />
+        <input
+          type="email"
+          placeholder="Your Email"
+          class="message__email message__field"
+        />
 
-<section class="message">
-    <h1 class="message__header">
-        Leave Message
-    </h1>
-    <div class="message__input">
-        <input type="text" placeholder="Your Name" class="message__name message__field">
-        <input type="email" placeholder="Your Email" class="message__email message__field">
-        
-        <input type="text" placeholder="Your message" class="message__msg message__field">
-        <button type="submit" class="message__submit--btn btn">Send Message</button>
-
-    </div>
-</section>
-
+        <input
+          type="text"
+          placeholder="Your message"
+          class="message__msg message__field"
+        />
+        <button type="submit" class="message__submit--btn btn">
+          Send Message
+        </button>
+      </div>
+    </section>
 
     <section class="footer">
-        <div class="footer__info">
-            <div class="footer__info--image">
-                <img src="../img/logo.png" alt="Logo">
-            </div>
-            <p>Address: 60-49 Road 11378 New York</p>
-            <p>Phone: +65 11.188.888</p>
-            <p>Email: hello@colorlib.com</p>
+      <div class="footer__info">
+        <div class="footer__info--image">
+          <img src="../img/logo.png" alt="Logo" />
         </div>
+        <p>Address: 60-49 Road 11378 New York</p>
+        <p>Phone: +65 11.188.888</p>
+        <p>Email: hello@colorlib.com</p>
+      </div>
 
-        <div class="footer__links--info">
-            <h2 class="footer__links--header">Useful Links</h2>
-            <div class="footer__links--box">
-                <div class="footer__links--box-left">
-                    <ul class="footer__links--lists">
-                        <a href="#" class="footer__links--link">
-                            <li class="footer__links--items">About Us</li>
-                        </a><a href="#" class="footer__links--link">
-                            <li class="footer__links--items">About Our Shop</li>
-                        </a><a href="#" class="footer__links--link">
-                            <li class="footer__links--items">Secure Shopping</li>
-                        </a><a href="#" class="footer__links--link">
-                            <li class="footer__links--items">Delivery Information</li>
-                        </a><a href="#" class="footer__links--link">
-                            <li class="footer__links--items">Privacy Policy</li>
-                        </a><a href="#" class="footer__links--link">
-                            <li class="footer__links--items">Our Sitemap</li>
-                        </a>
-                    </ul>
-                </div>
+      <div class="footer__links--info">
+        <h2 class="footer__links--header">Useful Links</h2>
+        <div class="footer__links--box">
+          <div class="footer__links--box-left">
+            <ul class="footer__links--lists">
+              <a href="#" class="footer__links--link">
+                <li class="footer__links--items">About Us</li> </a
+              ><a href="#" class="footer__links--link">
+                <li class="footer__links--items">About Our Shop</li> </a
+              ><a href="#" class="footer__links--link">
+                <li class="footer__links--items">Secure Shopping</li> </a
+              ><a href="#" class="footer__links--link">
+                <li class="footer__links--items">Delivery Information</li> </a
+              ><a href="#" class="footer__links--link">
+                <li class="footer__links--items">Privacy Policy</li> </a
+              ><a href="#" class="footer__links--link">
+                <li class="footer__links--items">Our Sitemap</li>
+              </a>
+            </ul>
+          </div>
 
-                <div class="footer__links--box-right">
-                    <a href="#" class="footer__links--link">
-                        <li class="footer__links--items">Who We Are</li>
-                    </a><a href="#" class="footer__links--link">
-                        <li class="footer__links--items">Our Services</li>
-                    </a><a href="#" class="footer__links--link">
-                        <li class="footer__links--items">Projects</li>
-                    </a><a href="#" class="footer__links--link">
-                        <li class="footer__links--items">Contacts</li>
-                    </a><a href="#" class="footer__links--link">
-                        <li class="footer__links--items">Innovation</li>
-                    </a><a href="#" class="footer__links--link">
-                        <li class="footer__links--items">Testimonials</li>
-                    </a>
-                </div>
-            </div>
+          <div class="footer__links--box-right">
+            <a href="#" class="footer__links--link">
+              <li class="footer__links--items">Who We Are</li> </a
+            ><a href="#" class="footer__links--link">
+              <li class="footer__links--items">Our Services</li> </a
+            ><a href="#" class="footer__links--link">
+              <li class="footer__links--items">Projects</li> </a
+            ><a href="#" class="footer__links--link">
+              <li class="footer__links--items">Contacts</li> </a
+            ><a href="#" class="footer__links--link">
+              <li class="footer__links--items">Innovation</li> </a
+            ><a href="#" class="footer__links--link">
+              <li class="footer__links--items">Testimonials</li>
+            </a>
+          </div>
         </div>
+      </div>
 
-        <div class="footer__query">
-            <h2 class="footer__query--header">
-                Join Our NewsLetter Now
-            </h2>
-            <p class="footer__query--text">
-                Get E-mail updates about our latest shop and special offers.
-            </p>
-            <div class="footer__query--input">
-                <input type="text" placeholder="Enter your mail" class="footer__query--input-text">
-                <button class="btn footer__query--btn">Subscribe</button>
-            </div>
-            <div class="footer__query--icons">
-                <a href="#">
-                    <svg class="footer__query--facebook-icon icon">
-                        <use xlink:href="../img/sprite.svg#icon-facebook"></use>
-                    </svg>
-                </a>
-                <a href="#">
-                    <svg class="footer__query--instagram-icon icon">
-                        <use xlink:href="../img/sprite.svg#icon-instagram"></use>
-                    </svg>
-                </a>
-                <a href="#">
-                    <svg class="footer__query--whatsapp-icon icon">
-                        <use xlink:href="../img/sprite.svg#icon-whatsapp"></use>
-                    </svg>
-                </a>
-                <a href="#">
-                    <svg class="footer__query--pinterest-icon icon">
-                        <use xlink:href="../img/sprite.svg#icon-pinterest-p"></use>
-                    </svg>
-                </a>
-
-            </div>
+      <div class="footer__query">
+        <h2 class="footer__query--header">Join Our NewsLetter Now</h2>
+        <p class="footer__query--text">
+          Get E-mail updates about our latest shop and special offers.
+        </p>
+        <div class="footer__query--input">
+          <input
+            type="text"
+            placeholder="Enter your mail"
+            class="footer__query--input-text"
+          />
+          <button class="btn footer__query--btn">Subscribe</button>
         </div>
+        <div class="footer__query--icons">
+          <a href="#">
+            <svg class="footer__query--facebook-icon icon">
+              <use xlink:href="../img/sprite.svg#icon-facebook"></use>
+            </svg>
+          </a>
+          <a href="#">
+            <svg class="footer__query--instagram-icon icon">
+              <use xlink:href="../img/sprite.svg#icon-instagram"></use>
+            </svg>
+          </a>
+          <a href="#">
+            <svg class="footer__query--whatsapp-icon icon">
+              <use xlink:href="../img/sprite.svg#icon-whatsapp"></use>
+            </svg>
+          </a>
+          <a href="#">
+            <svg class="footer__query--pinterest-icon icon">
+              <use xlink:href="../img/sprite.svg#icon-pinterest-p"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
     </section>
 
     <section class="copyright">
-        <div class="copyright__text">
-            <p>Copyright &copy 2024 All rights reserved | This template is made with<svg
-                    class="copyright--love-icon icon">
-                    <use xlink:href="../img/sprite.svg#icon-heart"></use>
-                </svg>by <span class="copyright__text--blue"><a href="https://colorlib.com/"
-                        class="copyright__text--link">Colorlib</a></span></p>
-        </div>
-        <div class="copyright__image">
-            <img src="../img/footerpayment.png" alt="Payment">
-        </div>
+      <div class="copyright__text">
+        <p>
+          Copyright &copy 2024 All rights reserved | This template is made
+          with<svg class="copyright--love-icon icon">
+            <use xlink:href="../img/sprite.svg#icon-heart"></use></svg
+          >by
+          <span class="copyright__text--blue"
+            ><a href="https://colorlib.com/" class="copyright__text--link"
+              >Colorlib</a
+            ></span
+          >
+        </p>
+      </div>
+      <div class="copyright__image">
+        <img src="../img/footerpayment.png" alt="Payment" />
+      </div>
     </section>
-</body>
-
+  </body>
 </html>
