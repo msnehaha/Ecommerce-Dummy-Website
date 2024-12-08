@@ -716,6 +716,13 @@ section {
   display: block;
   transition: 0.3s ease; }
 
+.add__product--btn {
+  padding: 1rem;
+  cursor: pointer; }
+  .add__product--btn-container {
+    display: flex;
+    justify-content: center; }
+
 .info {
   padding: 5rem 10rem;
   display: flex;

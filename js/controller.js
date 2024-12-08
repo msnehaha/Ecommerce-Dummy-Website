@@ -26,7 +26,6 @@ const loadProducts = async function () {
 const loadCarts = async function () {
   const data = await model.getRequest("carts/1");
   for (var item of data.products) {
-    console.log(item);
     cartView(item);
   }
 };
@@ -42,3 +41,10 @@ const dropdownEffect = function () {
 };
 
 navMain?.addEventListener("click", dropdownEffect);
+
+document
+  .querySelector(".add__product--btn")
+  .addEventListener("click", function () {
+    console.log("hey");
+    window.location.href = "screens/addProduct.html";
+  });

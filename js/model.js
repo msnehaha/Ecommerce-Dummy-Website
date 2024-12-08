@@ -1,23 +1,27 @@
-import { URI } from "./config.js";
-
+import { URI, ADD_PRODUCT_URI } from "./config.js";
 
 export const getRequest = (url) => {
-    return fetch(`${URI}/${url}`, {
-        headers: {
-            method: "GET",
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify()
-    }).then(res => res.json()).then(data => data);
+  return fetch(`${URI}/${url}`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then((res) => res.json())
+    .then((data) => data);
+};
 
-}
+export const addProduct = async function (data) {
+  return await fetch(ADD_PRODUCT_URI, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
+      return data;
+    });
+};
 
-
-
-// export const returnData = async function () {
-//     const data = await fetch(`https://dummyjson.com/products`).then(res => res.json()).then(data => { console.log(data,' model test');  
-//         return data;
-//     });
-
-
-// }
+addProduct({ title: "fdf", image: "Fsdf", price: 323 });

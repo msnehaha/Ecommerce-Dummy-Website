@@ -3,7 +3,6 @@ import { renderData } from "./view.js";
 const parentElement = document.querySelector(".cart-details");
 
 export const cartView = (data) => {
-  console.log(data);
   const markup = `<div class="cart-details__prod--info">
     <div class="cart-details__prod--info--title">
       <img src="${data.thumbnail}" alt="Prod Image" class="cart-details__prod--img" />
