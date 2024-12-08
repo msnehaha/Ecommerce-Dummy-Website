@@ -1,4 +1,4 @@
-import { URI, ADD_PRODUCT_URI } from "./config.js";
+import { URI, ADD_PRODUCT_URI, LOGIN_URI } from "./config.js";
 
 export const getRequest = (url) => {
   return fetch(`${URI}/${url}`, {
@@ -24,4 +24,18 @@ export const addProduct = async function (data) {
     });
 };
 
-addProduct({ title: "fdf", image: "Fsdf", price: 323 });
+export const loginPage = async function (data) {
+  return await fetch(LOGIN_URI, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      username: data.username,
+      password: data.password,
+    }),
+    // Include cookies (e.g., accessToken) in the request
+  })
+    .then((res) => res.json())
+    .then(console.log);
+};
+
+// loginPage({ username: "emilys", password: "emilyspass" });

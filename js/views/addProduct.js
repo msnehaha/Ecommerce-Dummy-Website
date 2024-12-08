@@ -1,4 +1,4 @@
-import { addProduct } from "../model.js";
+import { addProduct, getRequest } from "../model.js";
 
 const addProductForm = document.getElementById("addProductForm");
 if (addProductForm) {
@@ -20,6 +20,7 @@ if (addProductForm) {
     addProduct(productData)
       .then((response) => {
         console.log("Response from server:", response);
+        console.log(getRequest("products"));
 
         if (response.id) {
           alert("Product added successfully!");

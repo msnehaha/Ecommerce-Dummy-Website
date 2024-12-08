@@ -44,7 +44,18 @@ navMain?.addEventListener("click", dropdownEffect);
 
 document
   .querySelector(".add__product--btn")
-  .addEventListener("click", function () {
-    console.log("hey");
+  ?.addEventListener("click", function () {
     window.location.href = "screens/addProduct.html";
   });
+
+let getLoginInfo = function () {
+  let user = {
+    username: document.querySelector("#email"),
+    password: document.querySelector("#password"),
+  };
+  model.loginPage(user);
+};
+
+document
+  .querySelector(".login__submit--btn")
+  ?.addEventListener("submit", getLoginInfo);
