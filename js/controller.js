@@ -5,20 +5,30 @@ import { renderMap } from "./views/contact.js";
 // import { cartDetails } from "./views/prod-details.js";
 import { cartView } from "./views/cart-details.js";
 
-const featuredProductContainer = document.createElement("div");
-featuredProductContainer.className = "featured__info--links";
+
 const loginButton = document.querySelector(
   ".header__primary-right--login-text"
 );
-
 const navMain = document.querySelector(".hero__nav-main");
+const featuredProductContainer =   document.querySelector('.featured__body');
+const shopProductContainer = document.querySelector('.products__body--shop');
 
-const loadProducts = async function () {
-  const data = await model.getRequest("products");
-  // console.log(data);
-  // console.log(data.products, "testt products data");
+const searchButton = document.querySelector('.heroscreen__primary--btn-field');
+const searchField =  document.querySelector('.heroscreen__primary--search-field-input');
 
+let skipData = 0;
+
+
+const loadProducts = async function (skipData) {
+  const data = await model.getRequest(`products?limit=15&skip=${skipData}`);
+
+if(featuredProductContainer)
+  featuredProductContainer.innerHTML = '';
+if(shopProductContainer)
+    shopProductContainer.innerHTML = '';
   for (var item of data.products) {
+  
+    
     shopView(item);
     homeView(item);
 
@@ -29,12 +39,12 @@ const loadProducts = async function () {
 const loadCarts = async function () {
   const data = await model.getRequest("carts/1");
   for (var item of data.products) {
-    cartView(item);
+   cartView(item);
   }
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  loadProducts();
+  loadProducts(skipData);
   renderMap();
   loadCarts();
 });
@@ -93,6 +103,49 @@ let getLoginInfo = async function (e) {
   }
 };
 
-document.querySelector("#loginform")?.addEventListener("submit", getLoginInfo);
+document.querySelector(".loginform")?.addEventListener("submit", getLoginInfo);
 
 loginButton?.addEventListener("click", toggleButton);
+
+const prevPagination = document.querySelector('.pagination__links--prev');
+const nextPagination = document.querySelector('.pagination__links--next');
+
+if(prevPagination)
+prevPagination.addEventListener('click', function()
+{
+  if(skipData>0)
+  {
+    skipData=skipData-15;
+    loadProducts(skipData);
+    console.log(skipData)
+  }
+  
+})
+
+if(nextPagination)
+nextPagination.addEventListener('click', function()
+{
+  
+    skipData = skipData +15;
+    loadProducts(skipData);
+    console.log(skipData);
+  
+})
+
+searchButton.addEventListener('click',async  function()
+{
+  console.log(searchField.value);
+  if(searchField.value)
+  {
+    const data = await model.searchQuery(searchField.value);
+    console.log(data);
+    for(var item of data.products)
+    {
+      
+     console.log(item);
+    }
+  }
+  else{
+    alert('No text in the search field');
+  }
+})

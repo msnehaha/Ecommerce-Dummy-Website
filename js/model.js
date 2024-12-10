@@ -1,4 +1,4 @@
-import { URI, ADD_PRODUCT_URI, LOGIN_URI } from "./config.js";
+import { URI, ADD_PRODUCT_URI, LOGIN_URI, SEARCH_URI} from "./config.js";
 
 export const getRequest = (url) => {
   return fetch(`${URI}/${url}`, {
@@ -46,3 +46,18 @@ export const loginPage = async function (data) {
 };
 
 // loginPage({ username: "emilys", password: "emilyspass" });
+
+
+export const searchQuery = function(query)
+{
+  return fetch(`${SEARCH_URI}?q=${query}`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
+      return data});
+}

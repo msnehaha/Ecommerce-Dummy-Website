@@ -257,14 +257,6 @@ section {
       align-items: center;
       flex: 1 60%;
       gap: 1.5rem; }
-    .hero__primary--search-field {
-      display: flex;
-      flex: 1 auto;
-      justify-content: space-between; }
-      .hero__primary--search-field > input {
-        outline: none;
-        border: none;
-        font-family: inherit; }
     .hero__primary--phone {
       display: flex; }
       .hero__primary--phone > * {
@@ -451,8 +443,6 @@ section {
     .products {
       justify-content: center;
       gap: 3rem; } }
-  .products__pagination--home {
-    margin-left: 3rem; }
   .products__header {
     display: flex;
     align-items: center;
@@ -672,7 +662,8 @@ section {
     .heroscreen__primary--search-field > input {
       outline: none;
       border: none;
-      font-family: inherit; }
+      font-family: inherit;
+      width: 100%; }
   .heroscreen__primary--phone {
     display: flex; }
     .heroscreen__primary--phone > * {
@@ -694,7 +685,8 @@ section {
     align-items: center;
     height: 53px;
     font-weight: bold;
-    font-size: 0.8rem; }
+    font-size: 0.8rem;
+    cursor: pointer; }
   .heroscreen__container--image-box {
     background-image: linear-gradient(to right, #464641, transparent), url("../img/tomato.jpg");
     background-size: cover;
@@ -722,6 +714,17 @@ section {
   .add__product--btn-container {
     display: flex;
     justify-content: center; }
+
+.pagination--home {
+  margin-left: 3rem; }
+
+.pagination__list {
+  display: flex;
+  justify-content: space-between; }
+
+.pagination__links {
+  color: black;
+  font-weight: 700; }
 
 .info {
   padding: 5rem 10rem;
@@ -1051,6 +1054,17 @@ section {
     justify-content: start;
     gap: 10rem; }
 
+.cart-details__input-field {
+  width: 10%;
+  border: none; }
+
+.cart-details__btn {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: darkgray; }
+
 .cart-details__prod--info {
   display: flex;
   justify-content: space-between;
@@ -1079,7 +1093,21 @@ section {
   font-size: 1rem;
   color: grey; }
 
-.cart-details__btn {
-  outline: none;
-  border: none;
-  cursor: pointer; }
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem; }
+
+.loginform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem; }
+  .loginform__input-field {
+    padding: 0.5rem 2rem 0.5rem 0;
+    font-family: inherit;
+    width: 100%; }
+  .loginform__submit--btn {
+    padding: 1rem 2rem;
+    cursor: pointer; }

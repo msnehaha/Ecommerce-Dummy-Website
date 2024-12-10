@@ -14,12 +14,12 @@ export const cartView = (data) => {
         <button class="cart-details__btn cart-details__btn--subtractor">
           -
         </button>
-        <input type="number" value="1" />
-        <button class="cart-details__btn cart-details__btn--subtractor">
+        <input type="text" value=${data.quantity} class="cart-details__input-field"/>
+        <button class="cart-details__btn cart-details__btn-adder">
           +
         </button>
       </div>
-      <p>${data.total}</p>
+      <p>${data.total.toFixed(2)}</p>
       <div class="cart-details__cancel">
         <svg class="cart-details__cancel-icon icon">
           <use xlink:href="../img/sprite.svg#icon-close"></use>
@@ -29,5 +29,22 @@ export const cartView = (data) => {
   </div>
   <div class="container__divider"></div>;`;
 
-  renderData(parentElement, markup);
+  if(parentElement)renderData(parentElement, markup);
+
+  const inputField = document.querySelector(".cart-details__input-field");
+  const btnSubtractor = document.querySelector(
+    " .cart-details__btn--subtractor"
+  );
+  const btnAdder = document.querySelector(".cart-details__btn-adder");
+  
+  btnAdder.addEventListener("click", function () {
+    console.log('add');
+    
+    inputField.textContent = inputField.value+ 1;
+  });
+  btnSubtractor.addEventListener("click", function () {
+    if (inputField.value > 0) inputField.textContent = inputField.value - 1;
+  });
+  
 };
+
