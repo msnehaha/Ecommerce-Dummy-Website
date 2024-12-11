@@ -441,7 +441,7 @@ section {
   padding: 0.5rem;
   fill: black;
   margin: 0 0.5rem;
-  animation: rotate .3s linear; }
+  animation: rotateback .3s linear; }
   .featured__icon:hover {
     cursor: pointer;
     fill: white;
