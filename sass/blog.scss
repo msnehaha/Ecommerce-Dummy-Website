@@ -83,6 +83,12 @@
         flex-wrap: wrap;
         justify-content: space-between;
         width: 70%;
+@include respond(tab-land)
+{
+    flex-direction: column;
+    align-items: center;
+}
+
         &--divider{
             width: 100%;
            background-color: grey;

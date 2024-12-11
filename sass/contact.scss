@@ -43,10 +43,14 @@
     &__field{
         margin: 1rem 0;
         padding: 1rem;
-       max-width: 50%;
+       min-width: 50%;
        flex: 1 0 50%;
        &:active{
         border: 1px solid grey;
+       }
+       @include respond(tab-land)
+       {
+        min-width: 60%;
        }
        
     }

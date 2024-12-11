@@ -12,6 +12,12 @@
         &-white{
             fill: white;
         }
+
+    @include respond(tab-land)
+    {
+        width: 0.7rem;
+        height: 0.7rem;
+    }
 }
 
 .header__flag-img{

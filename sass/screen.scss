@@ -48,6 +48,14 @@
 
       width: 60%;
       margin: 2rem 0;
+      @include respond(tab-land)
+      {
+        width: 80%;
+      }
+      @include respond(tab-port)
+      {
+        width: 100%;
+      }
     }
 
     &--input {
@@ -95,11 +103,17 @@
     justify-content: space-between;
     font-size: 1.5rem;
 
+    @include respond(tab-land)
+    {
+      font-size: 1rem;
+    }
+
+
     &--primary {
       display: flex;
       width: 50%;
-      justify-content: start;
-      gap: 10rem;
+      justify-content: space-around;
+      margin-right: 6rem;
     }
   }
   &__input-field{
@@ -120,11 +134,15 @@
       justify-content: space-between;
       font-size: 1.1rem;
       padding: 2rem 0;
-      align-items: end;
+      align-items: center;
 
       &--title {
         display: flex;
         align-items: center;
+        @include respond(tab-land)
+        {
+          max-width: 40%;
+        }
       }
     }
     &--details {
@@ -132,6 +150,7 @@
       justify-content: space-between;
       width: 50%;
       font-weight: 700;
+      align-items: center;
 
       
     }
@@ -146,6 +165,8 @@
       gap: 1rem;
       font-size: 1rem;
       color: grey;
+
+      
     }
   }
  
