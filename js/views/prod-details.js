@@ -53,6 +53,7 @@ const btnSubtractor = document.querySelector(
   " .prod-details__body--btn-subtractor"
 );
 const btnAdder = document.querySelector(".prod-details__body--btn-adder");
+console.log(btnAdder);
 
 btnAdder.addEventListener("click", function () {
   inputField.textContent = inputField.value++;

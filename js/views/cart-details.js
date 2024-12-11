@@ -1,8 +1,16 @@
 import { renderData } from "./view.js";
+import { getRequest } from "../model.js";
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  loadCarts();
+});
 
 const parentElement = document.querySelector(".cart-details");
 
-export const cartView = (data) => {
+ const cartView = (data) => {
   const markup = `<div class="cart-details__prod--info">
     <div class="cart-details__prod--info--title">
       <img src="${data.thumbnail}" alt="Prod Image" class="cart-details__prod--img" />
@@ -15,7 +23,7 @@ export const cartView = (data) => {
           -
         </button>
         <input type="text" value=${data.quantity} class="cart-details__input-field"/>
-        <button class="cart-details__btn cart-details__btn-adder">
+        <button class="cart-details__btn cart-details__btn--adder">
           +
         </button>
       </div>
@@ -30,21 +38,30 @@ export const cartView = (data) => {
   <div class="container__divider"></div>;`;
 
   if(parentElement)renderData(parentElement, markup);
-
   const inputField = document.querySelector(".cart-details__input-field");
   const btnSubtractor = document.querySelector(
     " .cart-details__btn--subtractor"
   );
-  const btnAdder = document.querySelector(".cart-details__btn-adder");
-  
+  const btnAdder = document.querySelector(".cart-details__btn--adder");
+  console.log(btnAdder);
   btnAdder.addEventListener("click", function () {
     console.log('add');
     
-    inputField.textContent = inputField.value+ 1;
+    inputField.value = parseInt(inputField.value) + 1;
+    console.log(inputField);
   });
   btnSubtractor.addEventListener("click", function () {
-    if (inputField.value > 0) inputField.textContent = inputField.value - 1;
+    if (inputField.value > 0) inputField.textContent = inputField.value--;
   });
   
+  
 };
+
+const loadCarts = async function () {
+  const data = await getRequest("carts/1");
+  for (var item of data.products) {
+   cartView(item);
+  }
+};
+
 

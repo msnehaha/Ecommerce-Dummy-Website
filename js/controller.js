@@ -2,8 +2,7 @@ import * as model from "./model.js";
 import { shopView, productContainer } from "./views/shop.js";
 import { homeView } from "./views/home.js";
 import { renderMap } from "./views/contact.js";
-// import { cartDetails } from "./views/prod-details.js";
-import { cartView } from "./views/cart-details.js";
+
 
 
 const loginButton = document.querySelector(
@@ -36,17 +35,12 @@ if(shopProductContainer)
     localStorage.setItem(item.id, JSON.stringify(item));
   }
 };
-const loadCarts = async function () {
-  const data = await model.getRequest("carts/1");
-  for (var item of data.products) {
-   cartView(item);
-  }
-};
+
 
 document.addEventListener("DOMContentLoaded", () => {
   loadProducts(skipData);
   renderMap();
-  loadCarts();
+  // loadCarts();
 });
 
 const dropdownEffect = function () {
