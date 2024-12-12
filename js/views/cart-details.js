@@ -19,7 +19,7 @@ const parentElement = document.querySelector(".cart-details");
     <div class="cart-details__prod--details">
       <p>${data.price}</p>
       <div class="cart-details__prod-quantity">
-        <button class="cart-details__btn cart-details__btn--subtractor">
+        <button class="cart-details__btn cart-details__btn--subtractor" id= "btn__subtractor--${data.id}">
           -
         </button>
         <input type="text" value=${data.quantity} class="cart-details__input-field"/>
@@ -30,7 +30,7 @@ const parentElement = document.querySelector(".cart-details");
       <p>${data.total.toFixed(2)}</p>
       <div class="cart-details__cancel">
         <svg class="cart-details__cancel-icon icon">
-          <use xlink:href="../img/sprite.svg#icon-close"></use>
+          <use xlink:href="../img/sprite.svg#icon-th-large"></use>
         </svg>
       </div>
     </div>
@@ -47,7 +47,7 @@ const parentElement = document.querySelector(".cart-details");
   btnAdder.addEventListener("click", function () {
     console.log('add');
     
-    inputField.value = parseInt(inputField.value) + 1;
+    inputField.value = +inputField.value + 1;
     console.log(inputField);
   });
   btnSubtractor.addEventListener("click", function () {
@@ -61,6 +61,7 @@ const loadCarts = async function () {
   const data = await getRequest("carts/1");
   for (var item of data.products) {
    cartView(item);
+   console.log(item, "each item")
   }
 };
 

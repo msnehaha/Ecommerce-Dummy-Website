@@ -138,8 +138,15 @@ searchButton.addEventListener('click',async  function()
       
      console.log(item);
     }
+    // console.log('hey');
+    searchField.value = '';
   }
   else{
     alert('No text in the search field');
   }
 })
+
+document.querySelector('.menu-toggle').addEventListener('click', function () {
+  const mobileNav = document.querySelector('.mobile-nav');
+  mobileNav.classList.toggle('active');
+});

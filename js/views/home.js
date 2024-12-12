@@ -11,16 +11,24 @@ export const homeView = (data)=>{
                     <img src="${data.images?.[0]}" alt="Orange  " class="image-primary">
                 </div>
                   <div class="featured__items--icons">
-                  <svg class="featured__icon icon">
+                  <a href="#" class="featured__link link">
+                     <svg class="featured__icon icon">
                         <use xlink:href="img/sprite.svg#icon-heart"></use>
                     </svg>
-                   
-                    <svg class="featured__icon icon">
+                  </a>
+               
+                       <a href="#" class="featured__link link">
+                        <svg class="featured__icon icon">
                         <use xlink:href="img/sprite.svg#icon-retweet"></use>
                     </svg>
-                     <svg class="featured__icon icon ">
+                  </a>
+
+                        <a href="screens/cart-details.html" class="featured__link link">
+                        <svg class="featured__icon icon ">
                         <use xlink:href="img/sprite.svg#icon-shopping-cart"></use>
                     </svg>
+                  </a>
+                     
                     
                 </div>
                 <a href='../screens/product-details.html?id=${data.id}' class="featured__info--links"><h4 class="featured__items--info name" onclick = "productDetails">${data.title}</h4></a>

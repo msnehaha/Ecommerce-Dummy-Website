@@ -109,6 +109,9 @@ section {
   @media (max-width: 1200px) {
     .header__primary {
       padding: 1rem 2rem; } }
+  @media (max-width: 900px) {
+    .header__primary {
+      display: none; } }
   .header__primary-left {
     display: flex;
     gap: 1rem; }
@@ -139,17 +142,29 @@ section {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 7rem; }
+  @media (max-width: 900px) {
+    .header__secondary {
+      padding: 1rem 2rem; } }
   .header__secondary--nav-background {
     display: flex;
     flex: 1 40%;
     justify-content: space-evenly; }
   .header__secondary--heart-icon, .header__secondary--shoppingbag-icon {
     position: relative; }
+  .header__secondary--menu {
+    display: none; }
+    @media (max-width: 900px) {
+      .header__secondary--menu {
+        display: block;
+        border: 1px solid grey;
+        padding: 0.3rem; } }
   .header__secondary--icons {
     display: flex;
     justify-content: end;
-    flex: 1 20%;
     gap: 2rem; }
+    @media (max-width: 900px) {
+      .header__secondary--icons {
+        align-items: flex-end; } }
     .header__secondary--icons-items {
       display: flex;
       align-items: center;
@@ -167,8 +182,7 @@ section {
         top: 0;
         right: -12px; }
   .header__secondary--logo {
-    display: flex;
-    flex: 1 10%; }
+    display: flex; }
 
 .divider {
   content: "";
@@ -183,6 +197,18 @@ section {
     display: flex;
     flex: 1 40%;
     justify-content: space-evenly; }
+    @media (max-width: 900px) {
+      .nav-list {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 30%;
+        background-color: #e9e5e5;
+        height: 100vh;
+        z-index: 10000; }
+        .nav-list.active {
+          transform: translateX(0); } }
   .nav-item {
     list-style: none; }
   .nav-link {
@@ -252,8 +278,7 @@ section {
       color: black;
       font-size: 0.9rem; }
   .hero__primary {
-    width: 75%;
-    padding: 0 1rem; }
+    width: 75%; }
     @media (max-width: 900px) {
       .hero__primary {
         width: 100%;
@@ -1197,7 +1222,7 @@ section {
 
 .cart-details__prod-quantity {
   padding: 1rem 0rem;
-  width: 30%;
+  width: 15%;
   display: flex;
   gap: 1rem;
   font-size: 1rem;
