@@ -14,6 +14,8 @@ const shopProductContainer = document.querySelector('.products__body--shop');
 
 const searchButton = document.querySelector('.heroscreen__primary--btn-field');
 const searchField =  document.querySelector('.heroscreen__primary--search-field-input');
+const userProfile = document.querySelector('.header__primary-right--user-icon');
+const profileUpdateBtn = document.querySelector('.userform__submit--btn ');
 
 let skipData = 0;
 
@@ -146,7 +148,18 @@ searchButton.addEventListener('click',async  function()
   }
 })
 
-document.querySelector('.menu-toggle').addEventListener('click', function () {
+document.querySelector('.menu-toggle')?.addEventListener('click', function () {
   const mobileNav = document.querySelector('.mobile-nav');
   mobileNav.classList.toggle('active');
 });
+
+profileUpdateBtn.addEventListener('click', function(e)
+{
+  const accessToken = localStorage.getItem("accessToken");
+  console.log(model.getProfile(accessToken));
+
+})
+
+const updateTextInput = (val)=>{
+  document.getElementById('output').value=val; 
+}

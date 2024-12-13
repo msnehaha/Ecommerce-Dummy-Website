@@ -1,4 +1,4 @@
-import { URI, ADD_PRODUCT_URI, LOGIN_URI, SEARCH_URI} from "./config.js";
+import { URI, ADD_PRODUCT_URI, LOGIN_URI, SEARCH_URI, UPDATE_URI} from "./config.js";
 
 export const getRequest = (url) => {
   return fetch(`${URI}/${url}`, {
@@ -33,7 +33,7 @@ export const loginPage = async function (data) {
         username: data.username,
         password: data.password,
       }),
-      // credentials: "include", // Include cookies (e.g., accessToken) in the request
+      credentials: "omit", // Include cookies (e.g., accessToken) in the request
     })
       .then((res) => res.json())
       .then((data) => {
@@ -48,9 +48,9 @@ export const loginPage = async function (data) {
 // loginPage({ username: "emilys", password: "emilyspass" });
 
 
-export const searchQuery = function(query)
+export const searchQuery = async function(query)
 {
-  return fetch(`${SEARCH_URI}?q=${query}`, {
+  return await fetch(`${SEARCH_URI}?q=${query}`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -61,3 +61,22 @@ export const searchQuery = function(query)
       console.log(data);
       return data});
 }
+
+export const getProfile = async function(accessToken)
+{
+  return fetch(`${UPDATE_URI}/${accessToken}`, {
+    method: 'GET',
+    headers: {
+      "Content-Type": "application/json",
+      'Authorization': `${accessToken}`, // Pass JWT via Authorization header
+    }, 
+    credentials: 'omit' // Include cookies (e.g., accessToken) in the request
+  })
+  .then(res => res.json())
+  .then(data => {
+    return data;
+    console.log(data);
+  });
+  
+}
+// getProfile();

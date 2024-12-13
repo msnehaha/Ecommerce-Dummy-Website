@@ -203,8 +203,8 @@
                 <h1 class="container__left--header">
                     Price
                 </h1>
-                <div class="container__left--price-scroller"></div>
-                <div class="container__left--price-value">$10 - $540</div>
+             <input type="range" class="container__left--price-scroller" min="0" max="1000" value="540" step="1" onchange="updateTextInput(this.value)">
+                <p class="container__left--price-value">$10 - $<output id="output">1000</output></p>
             </div>
 
             <div class="container__left--colors">

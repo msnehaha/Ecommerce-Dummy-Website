@@ -292,6 +292,7 @@ section {
       border: 1px solid #dfdcdc;
       align-items: center;
       flex: 1 60%;
+      margin-left: 1rem;
       gap: 1.5rem; }
     .hero__primary--phone {
       display: flex; }
@@ -989,9 +990,7 @@ section {
     font-size: 1rem;
     line-height: 2; }
   .container__left--price-scroller {
-    width: 90%;
-    height: 2px;
-    background-color: red; }
+    accent-color: red; }
   .container__left--price-value {
     margin-top: 1rem;
     color: red;
